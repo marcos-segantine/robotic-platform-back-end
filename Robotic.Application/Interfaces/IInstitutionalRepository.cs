@@ -1,3 +1,4 @@
+using Robotic.Application.DTOs;
 using Robotic.Domain.Entity;
 using Robotic.Domain.Enum;
 
@@ -5,8 +6,9 @@ namespace Robotic.Application.Interfaces;
 
 public interface IInstitutionalRepository
 {
-    Task<Institutional> GetById(Guid id);
+    void Create(Institutional institutional);
+    Task<InstitutionalDTO> GetById(Guid id);
     Institutional Update(Institutional student);
     void Delete(Guid id);
-    IEnumerable<Institutional> GetAll(School? school);
+    IEnumerable<InstitutionalDTO> GetAll(School? school);
 }

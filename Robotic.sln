@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robotic.Domain", "Robotic.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robotic.Application", "Robotic.Application\Robotic.Application.csproj", "{9AC3C926-6379-4F11-9E4E-DD420B3831F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robotic.Infra", "Robotic.Infra\Robotic.Infra.csproj", "{6AF81D65-D7BE-455A-B71A-A443CE2B1234}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{9AC3C926-6379-4F11-9E4E-DD420B3831F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AC3C926-6379-4F11-9E4E-DD420B3831F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AC3C926-6379-4F11-9E4E-DD420B3831F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AF81D65-D7BE-455A-B71A-A443CE2B1234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF81D65-D7BE-455A-B71A-A443CE2B1234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF81D65-D7BE-455A-B71A-A443CE2B1234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF81D65-D7BE-455A-B71A-A443CE2B1234}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

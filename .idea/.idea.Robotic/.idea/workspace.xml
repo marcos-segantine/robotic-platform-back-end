@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Interfaces/IInstitutionalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Interfaces/IInstitutionalRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Interfaces/IStudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Interfaces/IStudentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Commands/CreateStudent/CreateStudentCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Students/Commands/CreateStudent/CreateStudentCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +60,8 @@
       <workItem from="1725318320940" duration="3348000" />
       <workItem from="1725326529230" duration="1437000" />
       <workItem from="1725401676468" duration="1475000" />
+      <workItem from="1725475430272" duration="1271000" />
+      <workItem from="1725487298012" duration="3614000" />
     </task>
     <servers />
   </component>

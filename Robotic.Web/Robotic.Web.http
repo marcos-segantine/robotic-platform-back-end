@@ -1,0 +1,6 @@
+@Robotic.Web_HostAddress = http://localhost:5264
+
+GET {{Robotic.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

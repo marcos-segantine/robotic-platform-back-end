@@ -8,16 +8,35 @@ namespace Robotic.Infra.Data;
 
 public class StudentRepository : IStudentRepository
 {
-    private readonly CollectionReference _collectionReference = new AppDbContext().GetCollection("Student");
+    private readonly CollectionReference _collectionReference = new AppDbContext().GetCollection("student");
     
     public void Create(Student student)
     {
         throw new NotImplementedException();
     }
 
-    public Task<Student> GetById(Guid id)
+    public async Task<Student> GetById(Guid id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var documentRef = _collectionReference.Document(id.ToString());
+            var data = await documentRef.GetSnapshotAsync();
+
+            if (data.Exists)
+            {
+                var student = new Student (id, "John Doe", School.Aparecida, Schooling.ElementarySchool, "John Doe");
+                return student;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public Student Update(Student student)

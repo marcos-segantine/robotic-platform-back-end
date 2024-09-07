@@ -11,4 +11,9 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Robotic.Domain\Robotic.Domain.csproj" />
+      <ProjectReference Include="..\Robotic.Infra\Robotic.Infra.csproj" />
+    </ItemGroup>
+
 </Project>

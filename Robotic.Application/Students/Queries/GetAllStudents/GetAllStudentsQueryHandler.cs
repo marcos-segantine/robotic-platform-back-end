@@ -9,9 +9,9 @@ public class GetAllStudentsQueryHandler
         _repository = repository;
     }
 
-    public IEnumerable<StudentDTO> Handle(GetAllStudentsQuery query)
+    public async Task<IEnumerable<StudentDTO>> Handle(GetAllStudentsQuery query)
     {
-        var students = _repository.GetAll(query.School);
+        var students = await _repository.GetAll(query.School);
         var studentsDTO = students.Select(student => new StudentDTO(student.Name, student.School, student.Schooling, student.PhotoPath));
 
         return studentsDTO;

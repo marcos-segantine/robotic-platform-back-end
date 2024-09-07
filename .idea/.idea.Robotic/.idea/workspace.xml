@@ -10,11 +10,11 @@
   <component name="ChangeListManager">
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Context/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Context/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Interfaces/IStudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Interfaces/IStudentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Queries/GetAllStudents/GetAllStudentsQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Students/Queries/GetAllStudents/GetAllStudentsQueryHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Infra/Data/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Data/StudentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Robotic.Infra.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Robotic.Infra.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Web/Robotic.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Robotic.Web.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +29,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35177de9032544018e31c9c64fbef1cbb2d000/de/b0fed78e/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35177de9032544018e31c9c64fbef1cbb2d000/ee/4b6158be/Monitor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ac543cc0bac74b1c8719d048e8bfec2f6a00/4c/0ce084af/ConfigurationExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5a29ddfe96ea435110af1c62714671493c2bdfbba95a3a64dd748c374a31fd4/DocumentSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cc312386d28715295a94b59acee8753c5ff39c9e2ab9dc985f72dd647ab2a/GaxPreconditions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file:///usr/lib/dotnet/sdk/8.0.108/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_6_all.globalconfig" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -47,19 +49,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Robotic.Web: http.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Robotic.Web: http.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Robotic.Web: http">
     <configuration name="Robotic.Web: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Robotic.Web/Robotic.Web.csproj" />
@@ -110,7 +112,8 @@
       <workItem from="1725401676468" duration="1475000" />
       <workItem from="1725475430272" duration="1271000" />
       <workItem from="1725487298012" duration="3916000" />
-      <workItem from="1725734621724" duration="1358000" />
+      <workItem from="1725734621724" duration="4168000" />
+      <workItem from="1725738990299" duration="3712000" />
     </task>
     <servers />
   </component>

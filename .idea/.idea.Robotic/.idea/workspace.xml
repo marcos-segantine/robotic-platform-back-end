@@ -9,11 +9,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Data/ProfessionalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Data/ProfessionalRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Data/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Data/StudentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/ProfessionalRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/ProfessionalRoutes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Institution/Commands/CreateInstitutional/CreateInstitutionalCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Institution/Commands/CreateInstitutional/CreateInstitutionalCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Institution/Commands/CreateInstitutional/CreateInstitutionalCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Institution/Commands/CreateInstitutional/CreateInstitutionalCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Institution/Commands/DeleteInstitutional/DeleteInstitutionalCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Institution/Commands/DeleteInstitutional/DeleteInstitutionalCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Institution/Commands/DeleteInstitutional/DeleteInstitutionalCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Institution/Commands/DeleteInstitutional/DeleteInstitutionalCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Institution/Commands/UpdateInstitutional/UpdateInstitutionalCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Institution/Commands/UpdateInstitutional/UpdateInstitutionalCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Institution/Commands/UpdateInstitutional/UpdateInstitutionalCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Institution/Commands/UpdateInstitutional/UpdateInstitutionalCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Institution/Queries/GetAllInstitutional/GetAllInstitutionalQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Institution/Queries/GetAllInstitutional/GetAllInstitutionalQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Institution/Queries/GetAllInstitutional/GetAllInstitutionalQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Institution/Queries/GetAllInstitutional/GetAllInstitutionalQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Institution/Queries/GetInstitutional/GetInstitutionalQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Institution/Queries/GetInstitutional/GetInstitutionalQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Institution/Queries/GetInstitutional/GetInstitutionalQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Institution/Queries/GetInstitutional/GetInstitutionalQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Commands/CreateProfessional/CreateProfessionalCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Professor/Commands/CreateProfessional/CreateProfessionalCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Commands/CreateProfessional/CreateProfessionalCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Professor/Commands/CreateProfessional/CreateProfessionalCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Commands/DeleteProfessional/DeleteProfessionalCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Professor/Commands/DeleteProfessional/DeleteProfessionalCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Commands/DeleteProfessional/DeleteProfessionalCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Professor/Commands/DeleteProfessional/DeleteProfessionalCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Commands/UpdateProfessional/UpdateProfessionalCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Professor/Commands/UpdateProfessional/UpdateProfessionalCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Commands/UpdateProfessional/UpdateProfessionalCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Professor/Commands/UpdateProfessional/UpdateProfessionalCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Queries/GetAllProfessional/GetAllProfessionalQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Professor/Queries/GetAllProfessional/GetAllProfessionalQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Queries/GetAllProfessional/GetAllProfessionalQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Professor/Queries/GetAllProfessional/GetAllProfessionalQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Queries/GetProfessional/GetProfessionalQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Professor/Queries/GetProfessional/GetProfessionalQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Queries/GetProfessional/GetProfessionalQueryHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Professor/Queries/GetProfessional/GetProfessionalQueryHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Robotic.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Robotic.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Commands/CreateStudent/CreateStudentCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/CreateStudent/CreateStudentCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Commands/CreateStudent/CreateStudentCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/CreateStudent/CreateStudentCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Commands/DeleteStudent/DeleteStudentCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/DeleteStudent/DeleteStudentCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Commands/DeleteStudent/DeleteStudentCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/DeleteStudent/DeleteStudentCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Commands/UpdateStudent/UpdateStudentCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/UpdateStudent/UpdateStudentCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Commands/UpdateStudent/UpdateStudentCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/UpdateStudent/UpdateStudentCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Queries/GetAllStudents/GetAllStudentsQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Queries/GetAllStudents/GetAllStudentsQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Queries/GetAllStudents/GetAllStudentsQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Queries/GetAllStudents/GetAllStudentsQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Queries/GetStudent/GetStudentQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Queries/GetStudent/GetStudentQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Students/Queries/GetStudent/GetStudentQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Queries/GetStudent/GetStudentQueryHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +140,7 @@
       <workItem from="1725487298012" duration="3916000" />
       <workItem from="1725734621724" duration="4168000" />
       <workItem from="1725738990299" duration="5475000" />
-      <workItem from="1725757641244" duration="3380000" />
+      <workItem from="1725757641244" duration="3821000" />
     </task>
     <servers />
   </component>

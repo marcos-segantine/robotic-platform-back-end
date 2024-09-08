@@ -10,4 +10,8 @@
       <ProjectReference Include="..\Robotic.Domain\Robotic.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Features\" />
+    </ItemGroup>
+
 </Project>

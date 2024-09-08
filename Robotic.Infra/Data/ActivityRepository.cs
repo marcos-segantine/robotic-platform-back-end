@@ -11,7 +11,8 @@ namespace Robotic.Infra.Data;
 public class ActivityRepository : IActivityRepository
 {
     private readonly CollectionReference _collectionReference = new AppDbContext().GetCollection("activities");
-    
+
+
     public async Task Create(Activity activity)
     {
         try

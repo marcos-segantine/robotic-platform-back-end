@@ -6,6 +6,7 @@ namespace Robotic.Application.Interfaces;
 
 public interface IActivityRepository
 {
+    Task Create(Activity activity);
     Task<ActivityDTO> GetById(Guid id);
     Task Update(Activity student);
     Task Delete(Guid id);

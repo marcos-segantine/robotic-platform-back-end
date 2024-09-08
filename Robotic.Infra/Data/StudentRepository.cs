@@ -17,7 +17,6 @@ public class StudentRepository : IStudentRepository
         try
         {
             var documentRef = _collectionReference.Document(student.Id.ToString());
-
             var studentObj = DataUtils.FormatDataToDb(student);
             
             await documentRef.SetAsync(studentObj);

@@ -1,6 +1,8 @@
+using Robotic.Domain.Commom;
+
 namespace Robotic.Domain.Entity;
 
-public class Professional
+public class Professional : BaseEntity
 {
     public Guid Id { get; private set; }
     public string Name { get; private set; }

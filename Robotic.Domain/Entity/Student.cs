@@ -1,8 +1,9 @@
+using Robotic.Domain.Commom;
 using Robotic.Domain.Enum;
 
 namespace Robotic.Domain.Entity;
 
-public class Student
+public class Student : BaseEntity
 {
     public Guid Id { get; private set; }
     public string Name { get; private set; }

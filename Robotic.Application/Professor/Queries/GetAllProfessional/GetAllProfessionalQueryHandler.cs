@@ -12,9 +12,9 @@ public class GetAllProfessionalQueryHandler
         _repository = repository;
     }
 
-    public IEnumerable<ProfessionalDTO> Handle(GetAllProfessionalQuery query)
+    public async Task<IEnumerable<ProfessionalDTO>> Handle(GetAllProfessionalQuery query)
     {
-        var professionalDTOs = _repository.GetAll(query.School);
+        var professionalDTOs = await _repository.GetAll(query.School);
         var professionals = professionalDTOs.Select(professional => new ProfessionalDTO(professional.Name, professional.PhotoPath));
 
         return professionals;

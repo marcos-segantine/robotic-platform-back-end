@@ -34,7 +34,6 @@ public class StudentRepository : IStudentRepository
         }
         catch (ArgumentException e)
         {
-            // Consider using a logging library for better error handling
             Console.WriteLine("Argument Exception: " + e.Message);
             throw;
         }

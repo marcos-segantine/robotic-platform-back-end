@@ -6,9 +6,9 @@ namespace Robotic.Application.Interfaces;
 
 public interface IProfessionalRepository
 {
-    void Create(Professional professional);
+    Task Create(Professional professional);
     Task<ProfessionalDTO> GetById(Guid id);
-    Professional Update(Professional student);
-    void Delete(Guid id);
-    IEnumerable<ProfessionalDTO> GetAll(School? school);
+    Task Update(Professional student);
+    Task Delete(Guid id);
+    Task<IEnumerable<ProfessionalDTO>> GetAll(School? school);
 }

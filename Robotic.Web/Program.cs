@@ -19,5 +19,6 @@ StudentsRoutes.AddStudentsRoutes(app);
 ProfessionalRoutes.AddProfessionalRoutes(app);
 InstitutionalRoutes.AddInstitutionalRoutes(app);
 ActivityRoutes.AddActivityRoutes(app);
+TrailRoutes.AddTrailRoutes(app);
 
 app.Run();

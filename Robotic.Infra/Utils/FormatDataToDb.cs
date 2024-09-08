@@ -28,6 +28,11 @@ public static class DataUtils
                 {
                     propValue = DataUtils.UpdateTime();
                 }
+                else if (propValue is Array)
+                {
+                    var propValueArray = propValue as IEnumerable<Guid>;
+                    propValue = propValueArray.Select(prop => prop.ToString());
+                }
                 
                 obj.Add(propName, propValue);
             }

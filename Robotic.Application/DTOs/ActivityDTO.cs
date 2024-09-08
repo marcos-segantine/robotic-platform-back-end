@@ -4,12 +4,11 @@ public class ActivityDTO
 {
     public Guid Id { get; private set; }
     public string Name { get; private set; }
-    public string Resume { get; private set; }
     public string Question { get; private set; }
     public string[] Alternatives { get; private set; }
     public short Points { get; private set; }
     
-    public ActivityDTO(Guid id, string name, string resume, string question, string[] alternatives, short points)
+    public ActivityDTO(Guid id, string name, string question, string[] alternatives, short points)
     {
         var year = DateTime.Today.Year;
         var month = DateTime.Today.Month;
@@ -20,7 +19,6 @@ public class ActivityDTO
         
         Id = id;
         Name = name;
-        Resume = resume;
         Question = question;
         Alternatives = alternatives;
         Points = points;

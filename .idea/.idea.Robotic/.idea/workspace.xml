@@ -11,11 +11,10 @@
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Application/DTOs/ActivityDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/DTOs/ActivityDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Interfaces/IActivityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Interfaces/IActivityRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Domain/Entity/Activity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Domain/Entity/Activity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Infra/Data/ActivityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Data/ActivityRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Infra/Utils/FormatDataToDb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Utils/FormatDataToDb.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/ActivityRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/ActivityRoutes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +117,9 @@
       <workItem from="1725738990299" duration="5475000" />
       <workItem from="1725757641244" duration="4571000" />
       <workItem from="1725801098583" duration="3599000" />
+      <workItem from="1725826913152" duration="54000" />
+      <workItem from="1725826978245" duration="31000" />
+      <workItem from="1725827034311" duration="909000" />
     </task>
     <servers />
   </component>

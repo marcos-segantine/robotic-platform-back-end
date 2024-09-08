@@ -11,8 +11,7 @@ namespace Robotic.Infra.Data;
 public class ActivityRepository : IActivityRepository
 {
     private readonly CollectionReference _collectionReference = new AppDbContext().GetCollection("activities");
-
-
+    
     public async Task Create(Activity activity)
     {
         try
@@ -38,7 +37,6 @@ public class ActivityRepository : IActivityRepository
         var data = new ActivityDTO(
             snapshot.GetValue<Guid>("id"),
             snapshot.GetValue<string>("name"),
-            snapshot.GetValue<string>("resume"),
             snapshot.GetValue<string>("question"),
             snapshot.GetValue<string[]>("alternatives"),
             snapshot.GetValue<short>("points")
@@ -91,7 +89,6 @@ public class ActivityRepository : IActivityRepository
             var newActivity = new ActivityDTO (
                document.GetValue<Guid>("id"),
                document.GetValue<string>("name"),
-               document.GetValue<string>("resume"),
                document.GetValue<string>("question"),
                document.GetValue<string[]>("alternatives"),
                document.GetValue<short>("points")

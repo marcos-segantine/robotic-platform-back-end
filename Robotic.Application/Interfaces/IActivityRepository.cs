@@ -1,3 +1,4 @@
+using Robotic.Application.DTOs;
 using Robotic.Domain.Entity;
 using Robotic.Domain.Enum;
 
@@ -5,8 +6,8 @@ namespace Robotic.Application.Interfaces;
 
 public interface IActivityRepository
 {
-    Task<Activity> GetById(Guid id);
-    Activity Update(Activity student);
-    void Delete(Guid id);
-    IEnumerable<Activity> GetAll(School? school);
+    Task<ActivityDTO> GetById(Guid id);
+    Task Update(Activity student);
+    Task Delete(Guid id);
+    Task<IEnumerable<ActivityDTO>> GetAll(School? school);
 }

@@ -4,6 +4,7 @@ using Robotic.Application.Interfaces;
 using Robotic.Domain.Entity;
 using Robotic.Domain.Enum;
 using Robotic.Infra.Context;
+using Robotic.Infra.Utils;
 
 namespace Robotic.Infra.Data;
 
@@ -17,12 +18,7 @@ public class ProfessionalRepository : IProfessionalRepository
         {
             var documentRef = _collectionReference.Document(professional.Id.ToString());
 
-            Dictionary<string, object> professionalObj = new Dictionary<string, object>
-            {
-                { "id", professional.Id.ToString() },
-                { "name", professional.Name },
-                { "photoPath", professional.PhotoPath },
-            };
+            var professionalObj = DataUtils.FormatDataToDb(professional);
             
             await documentRef.SetAsync(professionalObj);
         }
@@ -75,12 +71,8 @@ public class ProfessionalRepository : IProfessionalRepository
         try
         {
             var documentRef = _collectionReference.Document(professional.Id.ToString());
-        
-            Dictionary<string, object> professionalObj = new Dictionary<string, object>
-            {
-                { "name", professional.Name },
-                { "photoPath", professional.PhotoPath },
-            };
+            
+            var professionalObj = DataUtils.FormatDataToDb(professional, new []{"Id"});
 
             await documentRef.UpdateAsync(professionalObj);
         }

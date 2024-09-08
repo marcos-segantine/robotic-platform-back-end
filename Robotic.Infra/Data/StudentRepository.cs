@@ -1,8 +1,10 @@
+using Google.Apis.Logging;
 using Google.Cloud.Firestore;
 using Robotic.Application.Interfaces;
 using Robotic.Domain.Entity;
 using Robotic.Domain.Enum;
 using Robotic.Infra.Context;
+using Robotic.Infra.Utils;
 
 namespace Robotic.Infra.Data;
 
@@ -16,14 +18,7 @@ public class StudentRepository : IStudentRepository
         {
             var documentRef = _collectionReference.Document(student.Id.ToString());
 
-            Dictionary<string, object> studentObj = new Dictionary<string, object>
-            {
-                { "id", student.Id.ToString() },
-                { "name", student.Name },
-                { "school", student.School },
-                { "schooling", student.Schooling },
-                { "photoPath", student.PhotoPath },
-            };
+            var studentObj = DataUtils.FormatDataToDb(student);
             
             await documentRef.SetAsync(studentObj);
         }
@@ -78,14 +73,8 @@ public class StudentRepository : IStudentRepository
         try
         {
             var documentRef = _collectionReference.Document(student.Id.ToString());
-        
-            Dictionary<string, object> studentObj = new Dictionary<string, object>
-            {
-                { "name", student.Name },
-                { "school", student.School },
-                { "schooling", student.Schooling },
-                { "photoPath", student.PhotoPath },
-            };
+            
+            var studentObj = DataUtils.FormatDataToDb(student);
 
             await documentRef.UpdateAsync(studentObj);
         }
@@ -132,7 +121,7 @@ public class StudentRepository : IStudentRepository
             foreach (var document in data.Documents)
             {
                 var newStudent = new StudentDTO (
-                    document.GetValue<string>("name"), 
+                    document.GetValue<string>("name"),
                     (School)document.GetValue<int>("school"),
                     (Schooling)document.GetValue<int>("schooling"),
                     document.GetValue<string>("photoPath")

@@ -1,6 +1,6 @@
-using Robotic.Application.Interfaces;
 using Robotic.Domain.Entity;
 using Robotic.Domain.Enum;
+using Robotic.Infra.Data;
 
 namespace Robotic.Web.Routes;
 
@@ -8,39 +8,40 @@ public static class StudentsRoutes
 {
     public static void AddStudentsRoutes(this WebApplication app)
     {
-        app.MapGet("get-student", async (Guid id, IStudentRepository studentRepository) =>
+        var studentMethods = new StudentRepository();
+        
+        app.MapGet("get-student", async (Guid id) =>
         {
-            var student = await studentRepository.GetById(id);
+            var student = await studentMethods.GetById(id);
             return student == null ? Results.NoContent() : Results.Ok(student);
         });
-
-        app.MapGet("get-students", async (School? school, IStudentRepository studentRepository) =>
+        
+        app.MapGet("get-students", async (School? school) =>
         {
-            if (!Enum.IsDefined(typeof(School), school))
+            if (school != null && Enum.IsDefined(typeof(School), school) == false)
             {
-                return Results.BadRequest("Invalid school enum value.");
+                Results.BadRequest();
             }
-
-            var students = await studentRepository.GetAll(school);
+            
+            var students = await studentMethods.GetAll(school);
+            
             return students.Any() ? Results.Ok(students) : Results.NoContent();
         });
-
-        app.MapPost("create-student", async (Student student, IStudentRepository studentRepository) =>
+        
+        app.MapPost("create-student", async (Student student) =>
         {
-            await studentRepository.Create(student);
-            return Results.NoContent();
+            await studentMethods.Create(student);
+            Results.NoContent();
         });
-
-        app.MapPut("update-student", async (Student student, IStudentRepository studentRepository) =>
+        app.MapPut("update-student", async (Student student) =>
         {
-            await studentRepository.Update(student);
-            return Results.NoContent();
+            await studentMethods.Update(student);
+            Results.NoContent();
         });
-
-        app.MapDelete("delete-student", async (Guid id, IStudentRepository studentRepository) =>
+        app.MapDelete("delete-student", async (Guid id) =>
         {
-            await studentRepository.Delete(id);
-            return Results.NoContent();
+            await studentMethods.Delete(id);
+            Results.NoContent();
         });
     }
 }

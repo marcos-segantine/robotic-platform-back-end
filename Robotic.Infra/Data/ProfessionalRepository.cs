@@ -9,12 +9,7 @@ namespace Robotic.Infra.Data;
 
 public class ProfessionalRepository : IProfessionalRepository
 {
-    private readonly CollectionReference _collectionReference;
-
-    public ProfessionalRepository(AppDbContext dbContext)
-    {
-        _collectionReference = dbContext.GetCollection("professional");
-    }
+    private readonly CollectionReference _collectionReference = new AppDbContext().GetCollection("professional");
     
     public async Task Create(Professional professional)
     {
@@ -22,7 +17,7 @@ public class ProfessionalRepository : IProfessionalRepository
         {
             var documentRef = _collectionReference.Document(professional.Id.ToString());
 
-            var professionalObj = new Dictionary<string, object>
+            Dictionary<string, object> professionalObj = new Dictionary<string, object>
             {
                 { "id", professional.Id.ToString() },
                 { "name", professional.Name },
@@ -33,7 +28,8 @@ public class ProfessionalRepository : IProfessionalRepository
         }
         catch (ArgumentException e)
         {
-            Console.WriteLine("Argument Exception: " + e.Message);
+            Console.WriteLine("Argument Exception");
+            Console.WriteLine(e.Message);
             throw;
         }
         catch (Exception e)
@@ -50,21 +46,21 @@ public class ProfessionalRepository : IProfessionalRepository
             var documentRef = _collectionReference.Document(id.ToString());
             var data = await documentRef.GetSnapshotAsync();
 
-            if (!data.Exists)
+            if (data.Exists == false)
             {
                 return null;
             }
 
-            var professional = new ProfessionalDTO(
+            var professional = new ProfessionalDTO (
                 data.GetValue<string>("name"),
                 data.GetValue<string>("photoPath")
-            );
+                );
             
             return professional;
         }
         catch (InvalidOperationException e)
         {
-            Console.WriteLine("Field name not found: " + e.Message);
+            Console.WriteLine("Field name not found!");
             throw;
         }
         catch (Exception e)
@@ -80,7 +76,7 @@ public class ProfessionalRepository : IProfessionalRepository
         {
             var documentRef = _collectionReference.Document(professional.Id.ToString());
         
-            var professionalObj = new Dictionary<string, object>
+            Dictionary<string, object> professionalObj = new Dictionary<string, object>
             {
                 { "name", professional.Name },
                 { "photoPath", professional.PhotoPath },
@@ -100,6 +96,7 @@ public class ProfessionalRepository : IProfessionalRepository
         try
         {
             var documentRef = _collectionReference.Document(id.ToString());
+            
             await documentRef.DeleteAsync();
         }
         catch (Exception e)
@@ -113,17 +110,24 @@ public class ProfessionalRepository : IProfessionalRepository
     {
         try
         {
-            Query documentsRef = school.HasValue
-                ? _collectionReference.WhereEqualTo("school", (int)school)
-                : _collectionReference;
+            Query documentsRef;
+        
+            if (school.HasValue)
+            {
+                documentsRef = _collectionReference.WhereEqualTo("school", school.ToString());
+            }
+            else
+            {
+                documentsRef = _collectionReference;
+            }
         
             var data = await documentsRef.GetSnapshotAsync();
             var result = new List<ProfessionalDTO>();
 
             foreach (var document in data.Documents)
             {
-                var newProfessional = new ProfessionalDTO(
-                    document.GetValue<string>("name"),
+                var newProfessional = new ProfessionalDTO (
+                    document.GetValue<string>("name"), 
                     document.GetValue<string>("photoPath")
                 );
             
@@ -134,7 +138,8 @@ public class ProfessionalRepository : IProfessionalRepository
         }
         catch (ArgumentException e)
         {
-            Console.WriteLine("Argument Exception: " + e.Message);
+            Console.WriteLine("Argument Exception");
+            Console.WriteLine(e.Message);
             throw;
         }
         catch (Exception e)

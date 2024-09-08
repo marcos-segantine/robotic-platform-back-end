@@ -10,11 +10,10 @@
   <component name="ChangeListManager">
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Interfaces/IProfessionalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Interfaces/IProfessionalRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Professor/Queries/GetAllProfessional/GetAllProfessionalQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Professor/Queries/GetAllProfessional/GetAllProfessionalQueryHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Infra/Data/ProfessionalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Data/ProfessionalRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Infra/Data/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Data/StudentRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/ProfessionalRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/ProfessionalRoutes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,7 @@
       <workItem from="1725487298012" duration="3916000" />
       <workItem from="1725734621724" duration="4168000" />
       <workItem from="1725738990299" duration="5475000" />
-      <workItem from="1725757641244" duration="2286000" />
+      <workItem from="1725757641244" duration="3380000" />
     </task>
     <servers />
   </component>

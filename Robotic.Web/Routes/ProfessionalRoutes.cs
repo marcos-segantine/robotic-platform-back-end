@@ -1,6 +1,6 @@
-using Robotic.Application.Interfaces;
 using Robotic.Domain.Entity;
 using Robotic.Domain.Enum;
+using Robotic.Infra.Data;
 
 namespace Robotic.Web.Routes;
 
@@ -8,39 +8,39 @@ public static class ProfessionalRoutes
 {
     public static void AddProfessionalRoutes(this WebApplication app)
     {
-        app.MapGet("get-professional", async (Guid id, IProfessionalRepository professionalRepository) =>
+        var professionalMethods = new ProfessionalRepository();
+        
+        app.MapGet("get-professional", async (Guid id) =>
         {
-            var professional = await professionalRepository.GetById(id);
+            var professional = await professionalMethods.GetById(id);
             return professional == null ? Results.NoContent() : Results.Ok(professional);
         });
-
-        app.MapGet("get-professionals", async (School? school, IProfessionalRepository professionalRepository) =>
+        
+        app.MapGet("get-professionals", async (School? school) =>
         {
-            if (!Enum.IsDefined(typeof(School), school))
+            if (Enum.IsDefined(typeof(School), school) == false)
             {
-                return Results.BadRequest("Invalid school enum value.");
+                Results.BadRequest();
             }
-
-            var professionals = await professionalRepository.GetAll(school);
+            
+            var professionals = await professionalMethods.GetAll(school);
             return professionals.Any() ? Results.Ok(professionals) : Results.NoContent();
         });
-
-        app.MapPost("create-professional", async (Professional professional, IProfessionalRepository professionalRepository) =>
+        
+        app.MapPost("create-professional", async (Professional professional) =>
         {
-            await professionalRepository.Create(professional);
-            return Results.NoContent();
+            await professionalMethods.Create(professional);
+            Results.NoContent();
         });
-
-        app.MapPut("update-professional", async (Professional professional, IProfessionalRepository professionalRepository) =>
+        app.MapPut("update-professional", async (Professional professional) =>
         {
-            await professionalRepository.Update(professional);
-            return Results.NoContent();
+            await professionalMethods.Update(professional);
+            Results.NoContent();
         });
-
-        app.MapDelete("delete-professional", async (Guid id, IProfessionalRepository professionalRepository) =>
+        app.MapDelete("delete-professional", async (Guid id) =>
         {
-            await professionalRepository.Delete(id);
-            return Results.NoContent();
+            await professionalMethods.Delete(id);
+            Results.NoContent();
         });
     }
 }

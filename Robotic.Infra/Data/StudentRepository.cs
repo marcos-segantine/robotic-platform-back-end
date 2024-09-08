@@ -8,12 +8,7 @@ namespace Robotic.Infra.Data;
 
 public class StudentRepository : IStudentRepository
 {
-    private readonly CollectionReference _collectionReference;
-
-    public StudentRepository(AppDbContext dbContext)
-    {
-        _collectionReference = dbContext.GetCollection("student");
-    }
+    private readonly CollectionReference _collectionReference = new AppDbContext().GetCollection("student");
     
     public async Task Create(Student student)
     {
@@ -21,7 +16,7 @@ public class StudentRepository : IStudentRepository
         {
             var documentRef = _collectionReference.Document(student.Id.ToString());
 
-            var studentObj = new Dictionary<string, object>
+            Dictionary<string, object> studentObj = new Dictionary<string, object>
             {
                 { "id", student.Id.ToString() },
                 { "name", student.Name },
@@ -34,7 +29,8 @@ public class StudentRepository : IStudentRepository
         }
         catch (ArgumentException e)
         {
-            Console.WriteLine("Argument Exception: " + e.Message);
+            Console.WriteLine("Argument Exception");
+            Console.WriteLine(e.Message);
             throw;
         }
         catch (Exception e)
@@ -51,23 +47,23 @@ public class StudentRepository : IStudentRepository
             var documentRef = _collectionReference.Document(id.ToString());
             var data = await documentRef.GetSnapshotAsync();
 
-            if (!data.Exists)
+            if (data.Exists == false)
             {
                 return null;
             }
 
-            var student = new StudentDTO(
+            var student = new StudentDTO (
                 data.GetValue<string>("name"),
                 (School)data.GetValue<int>("school"),
                 (Schooling)data.GetValue<int>("schooling"),
                 data.GetValue<string>("photoPath")
-            );
+                );
             
             return student;
         }
         catch (InvalidOperationException e)
         {
-            Console.WriteLine("Field name not found: " + e.Message);
+            Console.WriteLine("Field name not found!");
             throw;
         }
         catch (Exception e)
@@ -83,7 +79,7 @@ public class StudentRepository : IStudentRepository
         {
             var documentRef = _collectionReference.Document(student.Id.ToString());
         
-            var studentObj = new Dictionary<string, object>
+            Dictionary<string, object> studentObj = new Dictionary<string, object>
             {
                 { "name", student.Name },
                 { "school", student.School },
@@ -105,6 +101,7 @@ public class StudentRepository : IStudentRepository
         try
         {
             var documentRef = _collectionReference.Document(id.ToString());
+            
             await documentRef.DeleteAsync();
         }
         catch (Exception e)
@@ -118,17 +115,24 @@ public class StudentRepository : IStudentRepository
     {
         try
         {
-            Query documentsRef = school.HasValue
-                ? _collectionReference.WhereEqualTo("school", (int)school)
-                : _collectionReference;
+            Query documentsRef;
+        
+            if (school.HasValue)
+            {
+                documentsRef = _collectionReference.WhereEqualTo("school", school.ToString());
+            }
+            else
+            {
+                documentsRef = _collectionReference;
+            }
         
             var data = await documentsRef.GetSnapshotAsync();
             var result = new List<StudentDTO>();
 
             foreach (var document in data.Documents)
             {
-                var newStudent = new StudentDTO(
-                    document.GetValue<string>("name"),
+                var newStudent = new StudentDTO (
+                    document.GetValue<string>("name"), 
                     (School)document.GetValue<int>("school"),
                     (Schooling)document.GetValue<int>("schooling"),
                     document.GetValue<string>("photoPath")
@@ -141,7 +145,8 @@ public class StudentRepository : IStudentRepository
         }
         catch (ArgumentException e)
         {
-            Console.WriteLine("Argument Exception: " + e.Message);
+            Console.WriteLine("Argument Exception");
+            Console.WriteLine(e.Message);
             throw;
         }
         catch (Exception e)

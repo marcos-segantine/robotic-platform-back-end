@@ -8,7 +8,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="" />
+    <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/DTOs/ActivityDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/DTOs/ActivityDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Interfaces/IActivityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Interfaces/IActivityRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Domain/Entity/Activity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Domain/Entity/Activity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Data/ActivityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Data/ActivityRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Utils/FormatDataToDb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Utils/FormatDataToDb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/ActivityRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/ActivityRoutes.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

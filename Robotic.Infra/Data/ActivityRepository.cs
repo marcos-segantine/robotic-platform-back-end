@@ -36,21 +36,26 @@ public class ActivityRepository : IActivityRepository
         var snapshot = await documentRef.GetSnapshotAsync();
 
         var data = new ActivityDTO(
+            snapshot.GetValue<Guid>("id"),
             snapshot.GetValue<string>("name"),
             snapshot.GetValue<string>("resume"),
-            snapshot.GetValue<string>("imagePath")
+            snapshot.GetValue<string>("question"),
+            snapshot.GetValue<string[]>("alternatives"),
+            snapshot.GetValue<short>("points")
             );
         
         return data;
     }
 
-    public async Task Update(Activity activity)
+    public async Task Update(ActivityDTO activity)
     {
         try
         {
             var documentRef = _collectionReference.Document(activity.Id.ToString());
-            var activityObj = DataUtils.FormatDataToDb(activity);
             
+            var activityObj = DataUtils.FormatDataToDb(activity);
+            activityObj.Add("modifiedOn", DataUtils.UpdateTime());
+
             await documentRef.UpdateAsync(activityObj);
         }
         catch (Exception e)
@@ -84,9 +89,12 @@ public class ActivityRepository : IActivityRepository
         foreach (var document in data.Documents)
         {
             var newActivity = new ActivityDTO (
-                document.GetValue<string>("name"),
-                document.GetValue<string>("resume"),
-                document.GetValue<string>("photoPath")
+               document.GetValue<Guid>("id"),
+               document.GetValue<string>("name"),
+               document.GetValue<string>("resume"),
+               document.GetValue<string>("question"),
+               document.GetValue<string[]>("alternatives"),
+               document.GetValue<short>("points")
             );
             
             result.Add(newActivity);

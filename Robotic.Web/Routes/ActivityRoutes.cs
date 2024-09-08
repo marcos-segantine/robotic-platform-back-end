@@ -1,3 +1,4 @@
+using Robotic.Application.DTOs;
 using Robotic.Domain.Entity;
 using Robotic.Domain.Enum;
 using Robotic.Infra.Data;
@@ -33,7 +34,7 @@ public static class ActivityRoutes
             await activityMethods.Create(activity);
             Results.NoContent();
         });
-        app.MapPut("update-activity", async (Activity activity) =>
+        app.MapPut("update-activity", async (ActivityDTO activity) =>
         {
             await activityMethods.Update(activity);
             Results.NoContent();

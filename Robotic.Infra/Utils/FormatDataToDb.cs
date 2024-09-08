@@ -13,18 +13,20 @@ public static class DataUtils
 
             foreach (var prop in data.GetType().GetProperties())
             {
-                var propName = prop.Name;
+                var propName = FormatKey(prop.Name);
 
                 if (propToIgnore.Contains(propName.ToLower()))
-                {
                     continue;
-                }
-                
+
                 var propValue = prop.GetValue(data, null);
 
                 if (propValue is Guid)
                 {
                     propValue = propValue.ToString();
+                }
+                else if (propName == "modifiedOn" && propValue is DateTime)
+                {
+                    propValue = DataUtils.UpdateTime();
                 }
                 
                 obj.Add(propName, propValue);
@@ -37,5 +39,22 @@ public static class DataUtils
             Console.WriteLine(e);
             return null;
         }        
+    }
+
+    public static DateTime UpdateTime()
+    {
+        var year = DateTime.Today.Year;
+        var month = DateTime.Today.Month;
+        var day = DateTime.Today.Day;
+        var hour = DateTime.Now.Hour;
+        var minutes = DateTime.Now.Minute;
+        var seconds = DateTime.Now.Second;
+        
+        return new DateTime(year, month, day, hour, minutes, seconds).ToUniversalTime(); 
+    }
+    
+    private static string FormatKey(string key)
+    {
+        return char.ToLower(key[0]) + key.Substring(1);
     }
 }

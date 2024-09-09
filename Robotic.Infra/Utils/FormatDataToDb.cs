@@ -1,3 +1,5 @@
+using Robotic.Domain.Entity;
+
 namespace Robotic.Infra.Utils;
 
 public static class DataUtils
@@ -32,6 +34,10 @@ public static class DataUtils
                 {
                     var propValueArray = propValue as IEnumerable<Guid>;
                     propValue = propValueArray.Select(prop => prop.ToString());
+                }
+                else if (propValue is Certifications)
+                {
+                    propValue = new Dictionary<Guid, int>();
                 }
                 
                 obj.Add(propName, propValue);

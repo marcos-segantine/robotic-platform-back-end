@@ -50,7 +50,9 @@ public class StudentRepository : IStudentRepository
                 data.GetValue<string>("name"),
                 (School)data.GetValue<int>("school"),
                 (Schooling)data.GetValue<int>("schooling"),
-                data.GetValue<string>("photoPath")
+                data.GetValue<string>("photoPath"),
+                data.GetValue<int>("points"),
+                data.GetValue<Certifications>("certifications")
                 );
             
             return student;
@@ -123,7 +125,9 @@ public class StudentRepository : IStudentRepository
                     document.GetValue<string>("name"),
                     (School)document.GetValue<int>("school"),
                     (Schooling)document.GetValue<int>("schooling"),
-                    document.GetValue<string>("photoPath")
+                    document.GetValue<string>("photoPath"),
+                    document.GetValue<int>("points"),
+                    document.GetValue<Certifications>("certifications")
                 );
             
                 result.Add(newStudent);

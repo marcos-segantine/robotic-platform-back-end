@@ -14,7 +14,7 @@ public class GetStudentQueryHandler
     public async Task<StudentDTO> Handle(GetStudentQuery query)
     {
         var student = await _repository.GetById(query.Id);
-        var studentDTO = new StudentDTO(student.Name, student.School, student.Schooling, student.PhotoPath);
+        var studentDTO = new StudentDTO(student.Name, student.School, student.Schooling, student.PhotoPath, student.Points, student.Certificates);
 
         return studentDTO;
     }

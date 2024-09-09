@@ -12,9 +12,29 @@ public class TrailRepository : ITrails
 {
     private readonly CollectionReference _collectionReference = new AppDbContext().GetCollection("trails");
 
-    public Task<TrailDTO> Get(Guid id)
+    public async Task<TrailDTO> Get(Guid id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var documentRef = _collectionReference.Document(id.ToString());
+            var snapshot = await documentRef.GetSnapshotAsync();
+
+            var data = new TrailDTO(
+                snapshot.GetValue<Guid>("id"),
+                snapshot.GetValue<string>("name"),
+                snapshot.GetValue<string>("resume"),
+                snapshot.GetValue<Difficulty>("difficulty"),
+                snapshot.GetValue<Guid[]>("activities"),
+                snapshot.GetValue<Schooling>("schooling")
+            );
+
+            return data;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public async Task Create(Trail trail)
@@ -33,23 +53,92 @@ public class TrailRepository : ITrails
         }
     }
 
-    public Task AddActivities(Guid[] activities)
+    public async Task AddActivities(Guid id, Guid[] activities)
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Adding activities");
+        
+        var documentRef = _collectionReference.Document(id.ToString());
+        var snapshot = await documentRef.GetSnapshotAsync();
+
+        var activitiesTrail = new List<Guid>(GuidUtils.StringToGuidArray(snapshot.GetValue<string[]>("activities")));
+        var activitiesTrailCopy = new List<Guid>(activities);
+        
+        foreach (var document in activitiesTrail)
+        {
+            if (activities.Contains(document))
+            {
+                activitiesTrailCopy.Add(document);
+            }
+        }
+
+        await documentRef.UpdateAsync("activities", FieldValue.ArrayUnion(GuidUtils.GuidToStringArray(activitiesTrailCopy.ToArray())));
     }
 
-    public Task RemoveActivities(Guid[] activities)
+    public async Task RemoveActivities(Guid id, Guid[] activities)
     {
-        throw new NotImplementedException();
+        var documentRef = _collectionReference.Document(id.ToString());
+        var snapshot = await documentRef.GetSnapshotAsync();
+
+        var activitiesTrail = new List<Guid>(GuidUtils.StringToGuidArray(snapshot.GetValue<string[]>("activities")));
+        var activitiesTrailCopy = new List<Guid>(activities);
+        
+        foreach (var document in activitiesTrail)
+        {
+            if (activities.Contains(document))
+            {
+                activitiesTrailCopy.Remove(document);
+            }
+        }
+        
+        await documentRef.UpdateAsync("activities", activitiesTrailCopy);
     }
 
-    public Task Delete(Guid id)
+    public async Task Delete(Guid id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var documentRef = _collectionReference.Document(id.ToString());
+            await documentRef.DeleteAsync();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
-    public Task<IEnumerable<Trail>> GetAll(Schooling? schooling)
+    public async Task<IEnumerable<TrailDTO>> GetAll(Schooling? schooling)
     {
-        throw new NotImplementedException();
+        try
+        {
+            Query documentRef = schooling != null ? 
+                _collectionReference.WhereEqualTo("schooling", schooling) :
+                _collectionReference;
+            
+            var snapshot = await documentRef.GetSnapshotAsync();
+
+            var result = new List<TrailDTO>();
+            
+            foreach (var document in snapshot.Documents)
+            {
+                var data = new TrailDTO(
+                    document.GetValue<Guid>("id"),
+                    document.GetValue<string>("name"),
+                    document.GetValue<string>("resume"),
+                    document.GetValue<Difficulty>("difficulty"),
+                    document.GetValue<Guid[]>("activities"),
+                    document.GetValue<Schooling>("schooling")
+                );
+                
+                result.Add(data);
+            }
+
+            return result;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }

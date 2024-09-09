@@ -8,8 +8,8 @@ public interface ITrails
 {
     Task<TrailDTO> Get(Guid id);
     Task Create(Trail trail);
-    Task AddActivities(Guid[] activities);
-    Task RemoveActivities(Guid[] activities);
+    Task AddActivities(Guid id, Guid[] activities);
+    Task RemoveActivities(Guid id, Guid[] activities);
     Task Delete(Guid id);
-    Task<IEnumerable<Trail>> GetAll(Schooling? schooling);
+    Task<IEnumerable<TrailDTO>> GetAll(Schooling? schooling);
 }

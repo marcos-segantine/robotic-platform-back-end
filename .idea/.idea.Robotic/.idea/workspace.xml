@@ -10,16 +10,9 @@
   <component name="ChangeListManager">
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/DTOs/StudentDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/DTOs/StudentDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/CreateStudent/CreateStudentCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/CreateStudent/CreateStudentCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/CreateStudent/CreateStudentCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/CreateStudent/CreateStudentCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/UpdateStudent/UpdateStudentCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/UpdateStudent/UpdateStudentCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/UpdateStudent/UpdateStudentCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Commands/UpdateStudent/UpdateStudentCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Features/Students/Queries/GetAllStudents/GetAllStudentsQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Queries/GetAllStudents/GetAllStudentsQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Features/Students/Queries/GetStudent/GetStudentQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Features/Students/Queries/GetStudent/GetStudentQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Domain/Entity/Student.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Domain/Entity/Student.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Data/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Data/StudentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Utils/FormatDataToDb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Utils/FormatDataToDb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/Interfaces/ITrails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Interfaces/ITrails.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Data/TrailRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Data/TrailRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/TrailRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/TrailRoutes.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +119,7 @@
       <workItem from="1725826978245" duration="31000" />
       <workItem from="1725827034311" duration="909000" />
       <workItem from="1725838807211" duration="800000" />
-      <workItem from="1725918167116" duration="2221000" />
+      <workItem from="1725918167116" duration="4885000" />
     </task>
     <servers />
   </component>

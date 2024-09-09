@@ -16,5 +16,19 @@ public static class TrailRoutes
             await trailMethods.Create(trail);
             Results.Ok();
         });
+        
+        app.MapPut("add-activity", async (Guid id, Guid[] activities) =>
+        {
+            await trailMethods.AddActivities(id, activities);
+
+            return Results.Ok();
+        });
+        
+        app.MapDelete("remove-activity", async (Guid id, Guid[] activities) =>
+        {
+            await trailMethods.RemoveActivities(id, activities);
+
+            return Results.Ok();
+        });
     }
 }

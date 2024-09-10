@@ -12,8 +12,9 @@ public class Student : BaseEntity
     public string PhotoPath { get; private set; }
     public int Points { get; private set; }
     public Certifications Certificates { get; private set; }
+    public ScheduleClass ScheduleClass { get; private set; }
 
-    public Student(Guid id, string name, School school, Schooling schooling, string photoPath, int points, Certifications certificates)
+    public Student(Guid id, string name, School school, Schooling schooling, string photoPath, int points, Certifications certificates, ScheduleClass scheduleClass)
     {
         Id = id;
         Name = name;
@@ -22,6 +23,7 @@ public class Student : BaseEntity
         PhotoPath = photoPath;
         Points = points;
         Certificates = certificates;
+        ScheduleClass = scheduleClass;
     }
 }
 

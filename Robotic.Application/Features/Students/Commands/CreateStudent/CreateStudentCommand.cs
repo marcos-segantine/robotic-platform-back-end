@@ -12,8 +12,9 @@ public class CreateStudentCommand
     public string PhotoPath { get; private set; }
     public int Points { get; private set; }
     public Certifications Certificates { get; private set; }
+    public ScheduleClass ScheduleClass { get; private set; }
 
-    public CreateStudentCommand(Guid id, string name, School school, Schooling schooling, string photoPath, int points, Certifications certificates)
+    public CreateStudentCommand(Guid id, string name, School school, Schooling schooling, string photoPath, int points, Certifications certificates, ScheduleClass scheduleClass)
     {
         Id = id;
         Name = name;
@@ -22,5 +23,6 @@ public class CreateStudentCommand
         PhotoPath = photoPath;
         Points = points;
         Certificates = certificates;
+        ScheduleClass = scheduleClass;
     }
 }

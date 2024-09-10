@@ -14,7 +14,7 @@ public class CreateStudentCommandHandler
     
     public void Handle(CreateStudentCommand command)
     {
-        var student = new Student(command.Id, command.Name, command.School, command.Schooling, command.PhotoPath, command.Points, command.Certificates);
+        var student = new Student(command.Id, command.Name, command.School, command.Schooling, command.PhotoPath, command.Points, command.Certificates, command.ScheduleClass);
 
         _repository.Create(student);
     }

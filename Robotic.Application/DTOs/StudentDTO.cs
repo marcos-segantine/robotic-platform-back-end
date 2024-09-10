@@ -9,8 +9,9 @@ public class StudentDTO
     public string PhotoPath { get; private set; }
     public int Points { get; private set; }
     public Certifications Certificates { get; private set; }
+    public ScheduleClass ScheduleClass { get; private set; }
 
-    public StudentDTO(string name, School school, Schooling schooling, string photoPath, int points, Certifications certificates)
+    public StudentDTO(string name, School school, Schooling schooling, string photoPath, int points, Certifications certificates, ScheduleClass scheduleClass)
     {
         Name = name;
         School = school;
@@ -18,5 +19,6 @@ public class StudentDTO
         PhotoPath = photoPath;
         Points = points;
         Certificates = certificates;
+        ScheduleClass = scheduleClass;
     }
 }

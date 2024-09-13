@@ -1,4 +1,3 @@
-using Google.Apis.Logging;
 using Google.Cloud.Firestore;
 using Robotic.Application.Interfaces;
 using Robotic.Domain.Entity;
@@ -52,7 +51,7 @@ public class StudentRepository : IStudentRepository
                 (Schooling)data.GetValue<int>("schooling"),
                 data.GetValue<string>("photoPath"),
                 data.GetValue<int>("points"),
-                data.GetValue<Certifications>("certifications"),
+                Converter.CertificationsConverter(data.GetValue<Dictionary<string, object>>("certificates")),
                 data.GetValue<ScheduleClass>("scheduleClass")
                 );
             

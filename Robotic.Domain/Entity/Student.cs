@@ -32,4 +32,11 @@ public class Certifications
     public IEnumerable<Guid> Done { get; private set; }
     public IEnumerable<Dictionary<Guid, int>> InProgress { get; private set; }
     public IEnumerable<Guid> NotStarted { get; private set; }
+
+    public Certifications(IEnumerable<Guid> done, IEnumerable<Dictionary<Guid, int>> inProgress, IEnumerable<Guid> notStarted)
+    {
+        Done = done;
+        InProgress = inProgress;
+        NotStarted = notStarted;
+    }
 }

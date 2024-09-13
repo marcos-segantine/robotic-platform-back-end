@@ -8,7 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="" />
+    <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Domain/Entity/Student.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Domain/Entity/Student.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Data/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Data/StudentRepository.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +119,8 @@
       <workItem from="1725827034311" duration="909000" />
       <workItem from="1725838807211" duration="800000" />
       <workItem from="1725918167116" duration="5124000" />
+      <workItem from="1726225468330" duration="4148000" />
+      <workItem from="1726265846259" duration="981000" />
     </task>
     <servers />
   </component>
@@ -155,7 +161,90 @@
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs</url>
+          <line>58</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs" containingFunctionPresentation="Method 'CertificationsConverter'">
+            <startOffsets>
+              <option value="2102" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2124" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs</url>
+          <line>33</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs" containingFunctionPresentation="Method 'CertificationsConverter'">
+            <startOffsets>
+              <option value="1228" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1268" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs</url>
+          <line>38</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs" containingFunctionPresentation="Method 'CertificationsConverter'">
+            <startOffsets>
+              <option value="1470" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1510" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs</url>
+          <line>41</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs" containingFunctionPresentation="Method 'CertificationsConverter'">
+            <startOffsets>
+              <option value="1578" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1601" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs</url>
+          <line>35</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs" containingFunctionPresentation="Method 'CertificationsConverter'">
+            <startOffsets>
+              <option value="1339" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1365" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs</url>
+          <line>36</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Utils/Converter.cs" containingFunctionPresentation="Method 'CertificationsConverter'">
+            <startOffsets>
+              <option value="1402" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1432" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#System.Collections.Generic.KeyValuePair`2" memberName="Value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

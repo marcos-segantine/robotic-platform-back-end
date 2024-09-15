@@ -69,6 +69,34 @@ public class StudentRepository : IStudentRepository
         }
     }
 
+    public async Task<IEnumerable<StudentDTO>> GetStudentsByName(string name)
+    {
+        var query = _collectionReference
+            .WhereGreaterThanOrEqualTo("name", name)
+            .WhereLessThan("name", name + "\uf8ff");
+        
+        var snapshot = await query.GetSnapshotAsync();
+
+        var students = new List<StudentDTO>();
+        
+        foreach (var document in snapshot.Documents)
+        {
+            var newStudent = new StudentDTO(
+                document.GetValue<string>("name"),
+                document.GetValue<School>("school"),
+                document.GetValue<Schooling>("schooling"),
+                document.GetValue<string>("photoPath"),
+                document.GetValue<int>("points"),
+                Converter.CertificationsConverter(document.GetValue<Dictionary<string, object>>("certificates")),
+                document.GetValue<ScheduleClass>("scheduleClass")
+                );
+            
+            students.Add(newStudent);
+        }
+        
+        return students;
+    }
+
     public async Task Update(Student student)
     {
         try

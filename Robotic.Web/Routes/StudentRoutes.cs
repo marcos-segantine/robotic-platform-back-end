@@ -27,6 +27,20 @@ public static class StudentsRoutes
             
             return students.Any() ? Results.Ok(students) : Results.NoContent();
         });
+
+        app.MapGet("get-students-by-name", async (string name) =>
+        {
+            var response = await studentMethods.GetStudentsByName(name);
+
+            if (response.Count() == 0)
+            {
+                return Results.NoContent();
+            }
+            else
+            {
+                return Results.Ok(response);
+            }
+        });
         
         app.MapPost("create-student", async (Student student) =>
         {

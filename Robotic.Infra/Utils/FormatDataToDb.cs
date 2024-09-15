@@ -37,7 +37,12 @@ public static class DataUtils
                 }
                 else if (propValue is Certifications)
                 {
-                    propValue = new Dictionary<Guid, int>();
+                    propValue = new Dictionary<string, object>
+                    {
+                        ["done"] = new List<Guid>(),
+                        ["inProgress"] = new List<KeyValuePair<Guid, int>>(),
+                        ["notStarted"] = new List<Guid>(),
+                    };
                 }
                 
                 obj.Add(propName, propValue);

@@ -1,3 +1,4 @@
+using System.Collections;
 using Robotic.Domain.Entity;
 
 namespace Robotic.Infra.Utils;
@@ -43,7 +44,6 @@ public class Converter
                             }
                         }
                     }
-
                     break;
                 case "notStarted":
                     foreach (var data in certificateType.Value as IEnumerable<object>)

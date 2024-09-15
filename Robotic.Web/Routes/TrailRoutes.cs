@@ -1,5 +1,5 @@
 using Robotic.Domain.Entity;
-using Robotic.Infra.Data;
+using Robotic.Infra.Repository;
 
 namespace Robotic.Web.Routes;
 

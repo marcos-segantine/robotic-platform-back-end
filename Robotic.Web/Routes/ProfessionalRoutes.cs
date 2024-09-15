@@ -1,6 +1,6 @@
 using Robotic.Domain.Entity;
 using Robotic.Domain.Enum;
-using Robotic.Infra.Data;
+using Robotic.Infra.Repository;
 
 namespace Robotic.Web.Routes;
 

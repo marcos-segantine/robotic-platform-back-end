@@ -5,7 +5,7 @@ using Robotic.Domain.Enum;
 using Robotic.Infra.Context;
 using Robotic.Infra.Utils;
 
-namespace Robotic.Infra.Data;
+namespace Robotic.Infra.Repository;
 
 public class StudentRepository : IStudentRepository
 {

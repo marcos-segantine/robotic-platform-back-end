@@ -3,7 +3,7 @@ using Robotic.Application.Interfaces;
 using Robotic.Domain.Entity;
 using Robotic.Domain.Enum;
 
-namespace Robotic.Infra.Data;
+namespace Robotic.Infra.Repository;
 
 public class InstitutionalRepository : IInstitutionalRepository
 {

@@ -10,9 +10,8 @@
   <component name="ChangeListManager">
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/Interfaces/IStudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/Interfaces/IStudentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/TrailRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/TrailRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/TrailRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/TrailRoutes.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DpaMonitoringSettings">
-    <option name="autoShow" value="false" />
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,20 +46,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Robotic.Web: http.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Robotic.Web: http.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Robotic.Web: http">
     <configuration name="Robotic.Web: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Robotic.Web/Robotic.Web.csproj" />

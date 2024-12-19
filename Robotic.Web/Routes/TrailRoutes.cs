@@ -1,4 +1,5 @@
 using Robotic.Domain.Entity;
+using Robotic.Domain.Enum;
 using Robotic.Infra.Repository;
 
 namespace Robotic.Web.Routes;
@@ -10,6 +11,12 @@ public static class TrailRoutes
         var trailMethods = new TrailRepository();
         
         app.MapGet("get-trail", () => "Institutional Information...");
+        
+        app.MapGet("get-trails", async (Schooling? schooling) =>
+        {
+            var trails = await trailMethods.GetAll(schooling);
+            return trails != null ? Results.Ok(trails) : Results.NotFound();
+        });
         
         app.MapPost("create-trail", async (Trail trail) =>
         {

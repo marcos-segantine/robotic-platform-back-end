@@ -3,12 +3,12 @@ namespace Robotic.Application.DTOs;
 public class ActivityDTO
 {
     public Guid Id { get; private set; }
-    public string Name { get; private set; }
+    public string Title { get; private set; }
     public string Question { get; private set; }
     public string[] Alternatives { get; private set; }
     public short Points { get; private set; }
     
-    public ActivityDTO(Guid id, string name, string question, string[] alternatives, short points)
+    public ActivityDTO(Guid id, string title, string question, string[] alternatives, short points)
     {
         var year = DateTime.Today.Year;
         var month = DateTime.Today.Month;
@@ -18,7 +18,7 @@ public class ActivityDTO
         var seconds = DateTime.Now.Second;
         
         Id = id;
-        Name = name;
+        Title = title;
         Question = question;
         Alternatives = alternatives;
         Points = points;

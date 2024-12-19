@@ -122,13 +122,15 @@ public class TrailRepository : ITrails
             foreach (var document in snapshot.Documents)
             {
                 var id = Guid.Parse(document.GetValue<string>("id"));
+                var activities = document.GetValue<List<string>>("activities")
+                    .Select(item => Guid.Parse(item.ToString())).ToArray();
                     
                 var data = new TrailDTO(
                     id,
                     document.GetValue<string>("name"),
                     document.GetValue<string>("resume"),
                     document.GetValue<Difficulty>("difficulty"),
-                    document.GetValue<Guid[]>("activities"),
+                    activities,
                     document.GetValue<Schooling>("schooling")
                 );
                 

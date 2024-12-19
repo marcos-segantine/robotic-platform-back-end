@@ -1,4 +1,5 @@
 using Robotic.Application.Interfaces;
+using Robotic.Domain.Entity;
 
 public class GetAllStudentsQueryHandler
 {
@@ -19,7 +20,8 @@ public class GetAllStudentsQueryHandler
                 student.PhotoPath,
                 student.Points,
                 student.Certificates,
-                student.ScheduleClass
+                student.ScheduleClass,
+                student.Statistics
                 ));
 
         return studentsDTO;

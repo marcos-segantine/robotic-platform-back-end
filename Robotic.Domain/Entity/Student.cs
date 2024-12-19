@@ -13,8 +13,9 @@ public class Student : BaseEntity
     public int Points { get; private set; }
     public Certifications Certificates { get; private set; }
     public ScheduleClass ScheduleClass { get; private set; }
+    public List<Statistics> Statistics { get; private set; }
 
-    public Student(Guid id, string name, School school, Schooling schooling, string photoPath, int points, Certifications certificates, ScheduleClass scheduleClass)
+    public Student(Guid id, string name, School school, Schooling schooling, string photoPath, int points, Certifications certificates, ScheduleClass scheduleClass, List<Statistics> statistics)
     {
         Id = id;
         Name = name;
@@ -24,6 +25,7 @@ public class Student : BaseEntity
         Points = points;
         Certificates = certificates;
         ScheduleClass = scheduleClass;
+        Statistics = statistics;
     }
 }
 
@@ -38,5 +40,15 @@ public class Certifications
         Done = done;
         InProgress = inProgress;
         NotStarted = notStarted;
+    }
+}
+
+public class Statistics
+{
+    public Dictionary<Guid, int> Activity { get; private set; }
+
+    public Statistics(Dictionary<Guid, int> activity)
+    {
+        Activity = activity;
     }
 }

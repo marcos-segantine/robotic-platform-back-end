@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using Google.Cloud.Firestore;
 using Robotic.Application.DTOs;
 using Robotic.Application.Interfaces;
@@ -11,6 +12,7 @@ namespace Robotic.Infra.Repository;
 public class TrailRepository : ITrails
 {
     private readonly CollectionReference _collectionReference = new AppDbContext().GetCollection("trails");
+    private readonly CollectionReference _activitiesCollectionReference = new AppDbContext().GetCollection("activities");
 
     public async Task<TrailDTO> Get(Guid id)
     {
@@ -55,8 +57,6 @@ public class TrailRepository : ITrails
 
     public async Task AddActivities(Guid id, Guid[] activities)
     {
-        Console.WriteLine("Adding activities");
-        
         var documentRef = _collectionReference.Document(id.ToString());
         var snapshot = await documentRef.GetSnapshotAsync();
 
@@ -72,6 +72,33 @@ public class TrailRepository : ITrails
         }
 
         await documentRef.UpdateAsync("activities", FieldValue.ArrayUnion(GuidUtils.GuidToStringArray(activitiesTrailCopy.ToArray())));
+    }
+
+    public async Task<IEnumerable<ActivityDTO>> GetActivities(Guid id)
+    {
+        var documentRef = _collectionReference.Document(id.ToString());
+        var snapshot = await documentRef.GetSnapshotAsync();
+        var activitiesIDs = snapshot.GetValue<List<string>>("activities");
+            
+        var result = new List<ActivityDTO>();
+
+        foreach (var activityID in activitiesIDs)
+        {
+            var activityRef = _activitiesCollectionReference.Document(activityID);
+            var data = await activityRef.GetSnapshotAsync();
+
+            var dataFormatted = new ActivityDTO(
+                Guid.Parse(data.GetValue<string>("id")),
+                data.GetValue<string>("title"),
+                data.GetValue<string>("question"),
+                data.GetValue<string[]>("alternatives"),
+                data.GetValue<short>("points")
+                );
+            
+            result.Add(dataFormatted);
+        }
+
+        return result;
     }
 
     public async Task RemoveActivities(Guid id, Guid[] activities)

@@ -14,7 +14,16 @@ public class UpdateStudentCommandHandler
     
     public void Handle(UpdateStudentCommand command)
     {
-        var student = new Student(command.Id, command.Name, command.School, command.Schooling, command.PhotoPath, command.Points, command.Certificates, command.ScheduleClass);
+        var student = new Student(
+            command.Id,
+            command.Name,
+            command.School,
+            command.Schooling,
+            command.PhotoPath,
+            command.Points,
+            command.Certificates,
+            command.ScheduleClass,
+            command.Statistics);
 
         _repository.Update(student);
     }

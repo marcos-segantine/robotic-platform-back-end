@@ -21,7 +21,8 @@ public class GetStudentQueryHandler
             student.PhotoPath,
             student.Points,
             student.Certificates,
-            student.ScheduleClass
+            student.ScheduleClass,
+            student.Statistics
             );
 
         return studentDTO;

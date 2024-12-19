@@ -47,11 +47,13 @@ public static class StudentsRoutes
             await studentMethods.Create(student);
             Results.NoContent();
         });
+        
         app.MapPut("update-student", async (Student student) =>
         {
             await studentMethods.Update(student);
             Results.NoContent();
         });
+        
         app.MapDelete("delete-student", async (Guid id) =>
         {
             await studentMethods.Delete(id);

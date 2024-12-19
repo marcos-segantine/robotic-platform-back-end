@@ -17,18 +17,6 @@ public static class ActivityRoutes
             return activity == null ? Results.NoContent() : Results.Ok(activity);
         });
         
-        app.MapGet("get-activities", async (School? school) =>
-        {
-            if (school != null && Enum.IsDefined(typeof(School), school) == false)
-            {
-                Results.BadRequest();
-            }
-            
-            var activities = await activityMethods.GetAll(school);
-            
-            return activities.Any() ? Results.Ok(activities) : Results.NoContent();
-        });
-        
         app.MapPost("create-activity", async (Activity activity) =>
         {
             await activityMethods.Create(activity);

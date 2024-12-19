@@ -17,7 +17,7 @@ public class ActivityRepository : IActivityRepository
         try
         {
             var documentRef = _collectionReference.Document(activity.Id.ToString());
-            var activityObj = DataUtils.FormatDataToDb(activity, new [] { "alternatives" });
+            var activityObj = DataUtils.FormatDataToDb(activity);
             
             await documentRef.SetAsync(activityObj);
         }

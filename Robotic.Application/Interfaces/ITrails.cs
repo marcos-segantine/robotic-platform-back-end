@@ -9,6 +9,7 @@ public interface ITrails
     Task<TrailDTO> Get(Guid id);
     Task Create(Trail trail);
     Task AddActivities(Guid id, Guid[] activities);
+    Task<IEnumerable<ActivityDTO>> GetActivities(Guid id);
     Task RemoveActivities(Guid id, Guid[] activities);
     Task Delete(Guid id);
     Task<IEnumerable<TrailDTO>> GetAll(Schooling? schooling);

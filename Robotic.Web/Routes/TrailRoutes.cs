@@ -18,6 +18,12 @@ public static class TrailRoutes
             return trails != null ? Results.Ok(trails) : Results.NotFound();
         });
         
+        app.MapGet("get-activities", async (Guid id) =>
+        {
+            var activities = await trailMethods.GetActivities(id);
+            return activities != null ? Results.Ok(activities) : Results.NotFound();
+        });
+        
         app.MapPost("create-trail", async (Trail trail) =>
         {
             await trailMethods.Create(trail);

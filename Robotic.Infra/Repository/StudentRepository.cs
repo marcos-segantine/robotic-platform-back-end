@@ -52,7 +52,8 @@ public class StudentRepository : IStudentRepository
                 data.GetValue<string>("photoPath"),
                 data.GetValue<int>("points"),
                 Converter.CertificationsConverter(data.GetValue<Dictionary<string, object>>("certificates")),
-                data.GetValue<ScheduleClass>("scheduleClass")
+                data.GetValue<ScheduleClass>("scheduleClass"),
+                data.GetValue<List<Statistics>>("statistics")
                 );
             
             return student;
@@ -88,7 +89,8 @@ public class StudentRepository : IStudentRepository
                 document.GetValue<string>("photoPath"),
                 document.GetValue<int>("points"),
                 Converter.CertificationsConverter(document.GetValue<Dictionary<string, object>>("certificates")),
-                document.GetValue<ScheduleClass>("scheduleClass")
+                document.GetValue<ScheduleClass>("scheduleClass"),
+                document.GetValue<List<Statistics>>("statistics")
                 );
             
             students.Add(newStudent);
@@ -156,7 +158,8 @@ public class StudentRepository : IStudentRepository
                     document.GetValue<string>("photoPath"),
                     document.GetValue<int>("points"),
                     document.GetValue<Certifications>("certifications"),
-                    document.GetValue<ScheduleClass>("scheduleClass")
+                    document.GetValue<ScheduleClass>("scheduleClass"),
+                    document.GetValue<List<Statistics>>("statistics")
                 );
             
                 result.Add(newStudent);

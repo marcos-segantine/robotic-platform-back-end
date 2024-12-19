@@ -13,8 +13,19 @@ public class UpdateStudentCommand
     public int Points { get; private set; }
     public Certifications Certificates { get; private set; }
     public ScheduleClass ScheduleClass { get; private set; }
+    public List<Statistics> Statistics { get; private set; }
 
-    public UpdateStudentCommand(Guid id, string name, School school, Schooling schooling, string photoPath, int points, Certifications certificates, ScheduleClass scheduleClass)
+    public UpdateStudentCommand(
+        Guid id,
+        string name,
+        School school,
+        Schooling schooling,
+        string photoPath,
+        int points,
+        Certifications certificates,
+        ScheduleClass scheduleClass,
+        List<Statistics> statistics
+        )
     {
         Id = id;
         Name = name;
@@ -24,5 +35,6 @@ public class UpdateStudentCommand
         Points = points;
         Certificates = certificates;
         ScheduleClass = scheduleClass;
+        Statistics = statistics;
     }
 }

@@ -32,7 +32,7 @@ public static class DataUtils
                 }
                 else if (propValue is Array)
                 {
-                    var propValueArray = propValue as IEnumerable<Guid>;
+                    var propValueArray = propValue as IEnumerable<string>;
                     propValue = propValueArray.Select(prop => prop.ToString());
                 }
                 else if (propValue is Certifications)

@@ -9,13 +9,24 @@ public class Activity : BaseEntity
     public string Question { get; private set; }
     public string[] Alternatives { get; private set; }
     public short Points { get; private set; }
+    public string[] Resources { get; private set; }
+    public string Summarize { get; private set; }
     
-    public Activity(Guid id, string title, string question, string[] alternatives, short points)
+    public Activity(
+        Guid id,
+        string title,
+        string question,
+        string[] alternatives,
+        short points,
+        string[] resources,
+        string summarize)
     {
         Id = id;
         Title = title;
         Question = question;
         Alternatives = alternatives;
         Points = points;
+        Resources = resources;
+        Summarize = summarize;
     }
 }

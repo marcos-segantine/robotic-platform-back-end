@@ -35,11 +35,13 @@ public class ActivityRepository : IActivityRepository
         var snapshot = await documentRef.GetSnapshotAsync();
 
         var data = new ActivityDTO(
-            snapshot.GetValue<Guid>("id"),
-            snapshot.GetValue<string>("name"),
+            Guid.Parse(snapshot.GetValue<string>("id")),
+            snapshot.GetValue<string>("title"),
             snapshot.GetValue<string>("question"),
             snapshot.GetValue<string[]>("alternatives"),
-            snapshot.GetValue<short>("points")
+            snapshot.GetValue<short>("points"),
+            snapshot.GetValue<string[]>("resources"),
+            snapshot.GetValue<string>("summarize")
             );
         
         return data;
@@ -91,7 +93,9 @@ public class ActivityRepository : IActivityRepository
                document.GetValue<string>("name"),
                document.GetValue<string>("question"),
                document.GetValue<string[]>("alternatives"),
-               document.GetValue<short>("points")
+               document.GetValue<short>("points"),
+               document.GetValue<string[]>("resources"),
+               document.GetValue<string>("summarize")
             );
             
             result.Add(newActivity);

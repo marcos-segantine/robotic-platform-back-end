@@ -7,8 +7,17 @@ public class ActivityDTO
     public string Question { get; private set; }
     public string[] Alternatives { get; private set; }
     public short Points { get; private set; }
+    public string[] Resources { get; private set; }
+    public string Summarize { get; private set; }
     
-    public ActivityDTO(Guid id, string title, string question, string[] alternatives, short points)
+    public ActivityDTO(
+        Guid id,
+        string title,
+        string question,
+        string[] alternatives,
+        short points,
+        string[] resources,
+        string summarize)
     {
         var year = DateTime.Today.Year;
         var month = DateTime.Today.Month;
@@ -22,5 +31,7 @@ public class ActivityDTO
         Question = question;
         Alternatives = alternatives;
         Points = points;
+        Resources = resources;
+        Summarize = summarize;
     }
 }

@@ -59,5 +59,20 @@ public static class StudentsRoutes
             await studentMethods.Delete(id);
             Results.NoContent();
         });
+        
+        app.MapPut("update-statistics", async (List<string> path, string field, int value) =>
+        {
+            if (field == "points")
+            {
+                await studentMethods.UpdateTrailsStatistics(path, field, value);
+                return Results.NoContent();
+            }
+            else
+            {
+                var boolValue = value == 0 ? false : true;
+                studentMethods.UpdateTrailsStatistics(path, field, boolValue);
+                return Results.NoContent();
+            }
+        });
     }
 }

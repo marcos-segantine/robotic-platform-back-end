@@ -179,4 +179,46 @@ public class StudentRepository : IStudentRepository
             throw;
         }
     }
+
+    public async Task UpdateTrailsStatistics(List<string> path, string field, object value)
+    {
+        TrailsStatistics statistics = new TrailsStatistics();
+        
+        if (value is int intValue)
+        {
+            await statistics.UpdateActivityState(path, field, intValue);
+        }
+        else if (value is bool boolValue)
+        {
+            await statistics.UpdateActivityState(path, field, boolValue);
+        }
+        else
+        {
+            throw new ArgumentException();
+        }
+    }
+    
+    private class TrailsStatistics
+    {
+        public string TrailID { get; private set; }
+
+        public async Task UpdateActivityState(List<string> path, string field, object value)
+        {
+            var activityRef = new AppDbContext()
+                .GetCollection("statistics")
+                .Document(path[0])
+                .Collection(path[1])
+                .Document(path[2]);
+
+            await activityRef.UpdateAsync(field, value);
+        }
+    }
+
+    public class ActivityStatistics
+    {
+        public bool IsCompleted { get; set; }
+        public bool Viewed { get; set; }
+        public int Points { get; set; }
+
+    }
 }

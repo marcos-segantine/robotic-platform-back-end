@@ -152,6 +152,58 @@
           </properties>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs</url>
+          <line>63</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" containingFunctionPresentation="Lambda expression inside Method 'AddStudentsRoutes'">
+            <startOffsets>
+              <option value="1939" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1940" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
+          <line>225</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'CreateStatistic'">
+            <startOffsets>
+              <option value="6710" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6726" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
+          <line>227</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'CreateStatistic'">
+            <startOffsets>
+              <option value="6757" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6764" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
+          <line>230</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'CreateStatistic'">
+            <startOffsets>
+              <option value="6792" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6990" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

@@ -197,11 +197,44 @@ public class StudentRepository : IStudentRepository
             throw new ArgumentException();
         }
     }
+
+    public async Task CreateStatistic(List<string> path)
+    {
+        var statistics = new TrailsStatistics();
+        try
+        {
+            await statistics.CreateStatistic(path);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
     
     private class TrailsStatistics
     {
-        public string TrailID { get; private set; }
+        public async Task CreateStatistic(List<string> path)
+        {
+            var activityRef = new AppDbContext()
+                .GetCollection("statistics")
+                .Document(path[0])
+                .Collection(path[1])
+                .Document(path[2]);
 
+            var data = await activityRef.GetSnapshotAsync();
+            if (data.Exists)
+            {
+                return;
+            }
+
+            await activityRef.SetAsync(new Dictionary<string, object>
+            {
+                { "isCompleted", false }, 
+                { "viewed", true },
+                { "points", 0 }
+            });
+        }
         public async Task UpdateActivityState(List<string> path, string field, object value)
         {
             var activityRef = new AppDbContext()
@@ -212,13 +245,5 @@ public class StudentRepository : IStudentRepository
 
             await activityRef.UpdateAsync(field, value);
         }
-    }
-
-    public class ActivityStatistics
-    {
-        public bool IsCompleted { get; set; }
-        public bool Viewed { get; set; }
-        public int Points { get; set; }
-
     }
 }

@@ -48,15 +48,15 @@ public static class StudentsRoutes
             Results.NoContent();
         });
         
-        app.MapPut("update-student", async (Student student) =>
+        app.MapPost("create-statistic", async (List<string> path) =>
         {
-            await studentMethods.Update(student);
+            await studentMethods.CreateStatistic(path);
             Results.NoContent();
         });
         
-        app.MapDelete("delete-student", async (Guid id) =>
+        app.MapPut("update-student", async (Student student) =>
         {
-            await studentMethods.Delete(id);
+            await studentMethods.Update(student);
             Results.NoContent();
         });
         
@@ -73,6 +73,12 @@ public static class StudentsRoutes
                 studentMethods.UpdateTrailsStatistics(path, field, boolValue);
                 return Results.NoContent();
             }
+        });
+        
+        app.MapDelete("delete-student", async (Guid id) =>
+        {
+            await studentMethods.Delete(id);
+            Results.NoContent();
         });
     }
 }

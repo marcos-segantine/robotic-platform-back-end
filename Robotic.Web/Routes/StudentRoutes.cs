@@ -48,6 +48,14 @@ public static class StudentsRoutes
             Results.NoContent();
         });
         
+        app.MapGet("get-statistic", async (string path) =>
+        {
+            var pathSplit = path.Split(",").ToList();
+            
+            var result = await studentMethods.GetStatistic(pathSplit);
+            return result != null ? Results.Ok(result) : Results.NoContent();
+        });
+        
         app.MapPost("create-statistic", async (List<string> path) =>
         {
             await studentMethods.CreateStatistic(path);

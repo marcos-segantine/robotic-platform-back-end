@@ -11,6 +11,7 @@ public class Activity : BaseEntity
     public short Points { get; private set; }
     public string[] Resources { get; private set; }
     public string Summarize { get; private set; }
+    public string Explanation { get; private set; }
     
     public Activity(
         Guid id,
@@ -19,7 +20,8 @@ public class Activity : BaseEntity
         string[] alternatives,
         short points,
         string[] resources,
-        string summarize)
+        string summarize,
+        string explanation)
     {
         Id = id;
         Title = title;
@@ -28,5 +30,6 @@ public class Activity : BaseEntity
         Points = points;
         Resources = resources;
         Summarize = summarize;
+        Explanation = explanation;
     }
 }

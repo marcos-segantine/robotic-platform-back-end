@@ -180,6 +180,21 @@ public class StudentRepository : IStudentRepository
         }
     }
 
+    public async Task<List<Dictionary<string, object>>> GetStatistic(List<string> path)
+    {
+        var statistics = new TrailsStatistics();
+        try
+        {
+            var result = await statistics.GetStatisticsFromTrail(path);
+            return result;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+    
     public async Task UpdateTrailsStatistics(List<string> path, string field, object value)
     {
         TrailsStatistics statistics = new TrailsStatistics();
@@ -214,6 +229,28 @@ public class StudentRepository : IStudentRepository
     
     private class TrailsStatistics
     {
+        public async Task<List<Dictionary<string, object>>> GetStatisticsFromTrail(List<string> path)
+        {
+            var activityRef = new AppDbContext()
+                .GetCollection("statistics")
+                .Document(path[0])
+                .Collection(path[1]);
+                
+            var data = await activityRef.GetSnapshotAsync();
+            var dataFormatted  = new List<Dictionary<string, object>>();
+
+            foreach (var item in data)
+            {
+                dataFormatted.Add(new Dictionary<string, object>()
+                {
+                    { "isCompleted", item.GetValue<bool>("isCompleted") }, 
+                    { "viewed", item.GetValue<bool>("viewed") },
+                    { "points", item.GetValue<short>("points") }
+                });
+            }
+
+            return dataFormatted;
+        }
         public async Task CreateStatistic(List<string> path)
         {
             var activityRef = new AppDbContext()

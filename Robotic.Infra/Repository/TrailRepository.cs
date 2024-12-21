@@ -94,7 +94,8 @@ public class TrailRepository : ITrails
                 data.GetValue<string[]>("alternatives"),
                 data.GetValue<short>("points"),
                 data.GetValue<string[]>("resources"),
-                data.GetValue<string>("summarize")
+                data.GetValue<string>("summarize"),
+                data.GetValue<string>("explanation")
                 );
             
             result.Add(dataFormatted);

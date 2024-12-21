@@ -10,7 +10,11 @@
   <component name="ChangeListManager">
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Application/DTOs/ActivityDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/DTOs/ActivityDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Domain/Entity/Activity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Domain/Entity/Activity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/ActivityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/ActivityRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/TrailRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/TrailRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,56 +157,69 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs</url>
-          <line>63</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" containingFunctionPresentation="Lambda expression inside Method 'AddStudentsRoutes'">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
+          <line>187</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetStatistic'">
             <startOffsets>
-              <option value="1939" />
+              <option value="5675" />
             </startOffsets>
             <endOffsets>
-              <option value="1940" />
+              <option value="5734" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="58" />
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>225</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'CreateStatistic'">
+          <line>233</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetStatisticsFromTrail'">
             <startOffsets>
-              <option value="6710" />
+              <option value="6873" />
             </startOffsets>
             <endOffsets>
-              <option value="6726" />
+              <option value="7027" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="59" />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>227</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'CreateStatistic'">
+          <line>241</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetStatisticsFromTrail'">
             <startOffsets>
-              <option value="6757" />
+              <option value="7192" />
             </startOffsets>
             <endOffsets>
-              <option value="6764" />
+              <option value="7218" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="60" />
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>230</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'CreateStatistic'">
+          <line>243</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetStatisticsFromTrail'">
             <startOffsets>
-              <option value="6792" />
+              <option value="7249" />
             </startOffsets>
             <endOffsets>
-              <option value="6990" />
+              <option value="7548" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="61" />
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
+          <line>251</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetStatisticsFromTrail'">
+            <startOffsets>
+              <option value="7576" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7597" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

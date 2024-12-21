@@ -227,7 +227,7 @@ public class StudentRepository : IStudentRepository
         }
     }
     
-    private class TrailsStatistics
+    public class TrailsStatistics
     {
         public async Task<List<Dictionary<string, object>>> GetStatisticsFromTrail(List<string> path)
         {
@@ -235,18 +235,53 @@ public class StudentRepository : IStudentRepository
                 .GetCollection("statistics")
                 .Document(path[0])
                 .Collection(path[1]);
-                
-            var data = await activityRef.GetSnapshotAsync();
-            var dataFormatted  = new List<Dictionary<string, object>>();
 
+            var data = await activityRef.GetSnapshotAsync();
+
+            var trailRef = new AppDbContext()
+                .GetCollection("trails")
+                .Document(path[1]);
+            
+            var snapshot = await trailRef.GetSnapshotAsync();
+            var activitiesFromTrail = snapshot.GetValue<string[]>("activities");
+            
+            var dataFormatted  = new List<Dictionary<string, object>>();
+            
+            if (data.Count == 0)
+            {
+                for (int i = 0; i < activitiesFromTrail.Length; i++)
+                {
+                    dataFormatted.Add(new Dictionary<string, object>()
+                    {
+                        { "isCompleted", false },
+                        { "viewed", false },
+                        { "points", 0 }
+                    });
+                }
+                
+                return dataFormatted;
+            }
+            
             foreach (var item in data)
             {
-                dataFormatted.Add(new Dictionary<string, object>()
+                if (activitiesFromTrail.Contains(item.Id))
                 {
-                    { "isCompleted", item.GetValue<bool>("isCompleted") }, 
-                    { "viewed", item.GetValue<bool>("viewed") },
-                    { "points", item.GetValue<short>("points") }
-                });
+                    dataFormatted.Add(new Dictionary<string, object>()
+                    {
+                        { "isCompleted", item.GetValue<bool>("isCompleted") }, 
+                        { "viewed", item.GetValue<bool>("viewed") },
+                        { "points", item.GetValue<short>("points") }
+                    });
+                }
+                else
+                {
+                    dataFormatted.Add(new Dictionary<string, object>()
+                    {
+                        { "isCompleted", false }, 
+                        { "viewed", false },
+                        { "points", 0 }
+                    });
+                }
             }
 
             return dataFormatted;

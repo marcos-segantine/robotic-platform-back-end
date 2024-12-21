@@ -24,7 +24,7 @@ public class TrailRepository : ITrails
             var data = new TrailDTO(
                 snapshot.GetValue<Guid>("id"),
                 snapshot.GetValue<string>("name"),
-                snapshot.GetValue<string>("resume"),
+                snapshot.GetValue<string>("summarize"),
                 snapshot.GetValue<Difficulty>("difficulty"),
                 snapshot.GetValue<Guid[]>("activities"),
                 snapshot.GetValue<Schooling>("schooling")
@@ -158,7 +158,7 @@ public class TrailRepository : ITrails
                 var data = new TrailDTO(
                     id,
                     document.GetValue<string>("name"),
-                    document.GetValue<string>("resume"),
+                    document.GetValue<string>("summarize"),
                     document.GetValue<Difficulty>("difficulty"),
                     activities,
                     document.GetValue<Schooling>("schooling")

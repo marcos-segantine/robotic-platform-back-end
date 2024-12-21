@@ -32,8 +32,20 @@ public static class DataUtils
                 }
                 else if (propValue is Array)
                 {
-                    var propValueArray = propValue as IEnumerable<string>;
-                    propValue = propValueArray.Select(prop => prop.ToString());
+                    if (propValue as IEnumerable<string> != null)
+                    {
+                        var propValueArray = propValue as IEnumerable<string>;
+                        propValue = propValueArray.Select(prop => prop.ToString());
+                    }
+                    else if (propValue as IEnumerable<Guid> != null)
+                    {
+                        var propValueArray = propValue as IEnumerable<Guid>;
+                        propValue = propValueArray.Select(prop => prop.ToString());
+                    }
+                    else
+                    {
+                        throw new ArgumentException();
+                    }
                 }
                 else if (propValue is Certifications)
                 {

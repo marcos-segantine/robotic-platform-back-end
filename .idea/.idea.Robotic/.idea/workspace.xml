@@ -9,13 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/DTOs/ActivityDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/DTOs/ActivityDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Domain/Entity/Activity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Domain/Entity/Activity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/ActivityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/ActivityRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/TrailRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/TrailRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Utils/FormatDataToDb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Utils/FormatDataToDb.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.Robotic.Web: http.executor": "Debug",
+    ".NET Launch Settings Profile.Robotic.Web: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "XThreadsFramesViewSplitterKey": "0.4331984",
@@ -129,6 +125,7 @@
       <workItem from="1726265846259" duration="981000" />
       <workItem from="1726430942300" duration="1627000" />
       <workItem from="1734642595948" duration="7089000" />
+      <workItem from="1734794999000" duration="2907000" />
     </task>
     <servers />
   </component>
@@ -137,25 +134,11 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Utils/FormatDataToDb.cs</url>
-          <line>55</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Utils/FormatDataToDb.cs" containingFunctionPresentation="Method 'FormatDataToDb'">
-            <startOffsets>
-              <option value="1843" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1855" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
           <line>187</line>
@@ -168,58 +151,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>233</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetStatisticsFromTrail'">
-            <startOffsets>
-              <option value="6873" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7027" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>241</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetStatisticsFromTrail'">
-            <startOffsets>
-              <option value="7192" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7218" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>243</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetStatisticsFromTrail'">
-            <startOffsets>
-              <option value="7249" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7548" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>251</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetStatisticsFromTrail'">
-            <startOffsets>
-              <option value="7576" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7597" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

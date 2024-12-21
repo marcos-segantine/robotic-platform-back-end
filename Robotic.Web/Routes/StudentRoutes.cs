@@ -42,6 +42,13 @@ public static class StudentsRoutes
             }
         });
         
+        app.MapGet("get-activities-not-viewed", async (Guid userID, string trailsID) =>
+        {
+            var trailsIDArray = trailsID.Split(',').ToList();
+            var response = await studentMethods.GetActivitiesNotViewed(userID, trailsIDArray);
+            return response != null && response.Count() > 0 ? Results.Ok(response) : Results.NoContent();
+        });
+        
         app.MapPost("create-student", async (Student student) =>
         {
             await studentMethods.Create(student);

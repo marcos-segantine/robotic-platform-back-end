@@ -1,4 +1,5 @@
 using Google.Cloud.Firestore;
+using Robotic.Application.DTOs;
 using Robotic.Application.Interfaces;
 using Robotic.Domain.Entity;
 using Robotic.Domain.Enum;
@@ -225,6 +226,34 @@ public class StudentRepository : IStudentRepository
             Console.WriteLine(e);
             throw;
         }
+    }
+
+    public async Task<List<ActivityDTO>> GetActivitiesNotViewed(Guid userID, List<string> trailsID)
+    {
+        var studentStatisticRef = new AppDbContext()
+            .GetCollection("statistics")
+            .Document(userID.ToString());
+
+        var data = new List<ActivityDTO>();
+        var activity = new ActivityRepository();
+        
+        foreach (var trailID in trailsID)
+        {
+            if (data.Count == 3)
+            {
+                break;
+            }
+            
+            var trailRef = studentStatisticRef.Collection(trailID);
+            var snapshot = await trailRef.GetSnapshotAsync();
+
+            foreach (var doc in snapshot)
+            {
+                data.Add(await activity.GetById(Guid.Parse(doc.Id)));
+            }
+        }
+        
+        return data;
     }
     
     public class TrailsStatistics

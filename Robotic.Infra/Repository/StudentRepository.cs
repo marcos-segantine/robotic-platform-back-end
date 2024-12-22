@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using Google.Cloud.Firestore;
 using Robotic.Application.DTOs;
 using Robotic.Application.Interfaces;
@@ -196,6 +197,22 @@ public class StudentRepository : IStudentRepository
         }
     }
     
+    public async Task<Dictionary<string, object>> GetLeaningProcess(Guid studentID)
+    {
+        try
+        {
+            TrailsStatistics statistics = new TrailsStatistics();
+        
+            var result = await statistics.GetLeaningProcess(studentID);
+            return result;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
     public async Task UpdateTrailsStatistics(List<string> path, string field, object value)
     {
         TrailsStatistics statistics = new TrailsStatistics();
@@ -348,6 +365,65 @@ public class StudentRepository : IStudentRepository
                 .Document(path[2]);
 
             await activityRef.UpdateAsync(field, value);
+        }
+
+        public async Task<Dictionary<string, object>> GetLeaningProcess(Guid studentID)
+        {
+            var trailRef = new AppDbContext().GetCollection("trails");
+            var trails = await trailRef.GetSnapshotAsync();
+
+            var result = new Dictionary<string, object>
+            {
+                { "activitiesCompleted", 0 },
+                { "activitiesViewed", 0 },
+                { "activitiesCount", 0 },
+                { "trailsCompleted", 0 },
+                { "trailsCount", 0 },
+            };
+            
+            foreach (var trail in trails)
+            {
+                var activities = trail.GetValue<string[]>("activities");
+                var activitiesCompleted = 0;
+
+                result["trailsCount"] = (int)result["trailsCount"] + 1;
+                
+                foreach (var activityID in activities)
+                {
+                    var statistic = new AppDbContext()
+                        .GetCollection("statistics")
+                        .Document(studentID.ToString())
+                        .Collection(trail.Id)
+                        .Document(activityID);
+                    
+                    var statisticData = await statistic.GetSnapshotAsync();
+
+                    if (!statisticData.Exists)
+                    {
+                        result["activitiesCount"] = (int)result["activitiesCount"] + activities.Length;
+                        continue;
+                    }
+                    
+                    if (statisticData.GetValue<bool>("isCompleted"))
+                    {
+                        result["activitiesCompleted"] = (int)result["activitiesCompleted"] + 1;
+                        activitiesCompleted++;
+                    }
+                    if (statisticData.GetValue<bool>("viewed"))
+                    {
+                        result["activitiesViewed"] = (int)result["activitiesViewed"] + 1;
+                    }
+                    
+                    result["activitiesCount"] = (int)result["activitiesCount"] + 1;
+                }
+
+                if (activitiesCompleted == activities.Length)
+                {
+                    result["trailsCompleted"] = (int)result["trailsCompleted"] + 1;
+                }
+            }
+
+            return result;
         }
     }
 }

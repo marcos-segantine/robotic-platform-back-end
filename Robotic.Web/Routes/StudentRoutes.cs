@@ -48,6 +48,12 @@ public static class StudentsRoutes
             var response = await studentMethods.GetActivitiesNotFinished(userID, trailsIDArray);
             return response != null && response.Count() > 0 ? Results.Ok(response) : Results.NoContent();
         });
+                
+        app.MapGet("get-learning-process", async (Guid studentID) =>
+        {
+            var response = await studentMethods.GetLeaningProcess(studentID);
+            return response != null ? Results.Ok(response) : Results.NoContent();
+        });
         
         app.MapPost("create-student", async (Student student) =>
         {

@@ -42,10 +42,10 @@ public static class StudentsRoutes
             }
         });
         
-        app.MapGet("get-activities-not-viewed", async (Guid userID, string trailsID) =>
+        app.MapGet("get-activities-not-finished", async (Guid userID, string trailsID) =>
         {
             var trailsIDArray = trailsID.Split(',').ToList();
-            var response = await studentMethods.GetActivitiesNotViewed(userID, trailsIDArray);
+            var response = await studentMethods.GetActivitiesNotFinished(userID, trailsIDArray);
             return response != null && response.Count() > 0 ? Results.Ok(response) : Results.NoContent();
         });
         

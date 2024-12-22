@@ -228,7 +228,7 @@ public class StudentRepository : IStudentRepository
         }
     }
 
-    public async Task<List<ActivityDTO>> GetActivitiesNotViewed(Guid userID, List<string> trailsID)
+    public async Task<List<ActivityDTO>> GetActivitiesNotFinished(Guid userID, List<string> trailsID)
     {
         var studentStatisticRef = new AppDbContext()
             .GetCollection("statistics")
@@ -249,7 +249,10 @@ public class StudentRepository : IStudentRepository
 
             foreach (var doc in snapshot)
             {
-                data.Add(await activity.GetById(Guid.Parse(doc.Id)));
+                if (doc.GetValue<bool>("isCompleted") == false)
+                {
+                    data.Add(await activity.GetById(Guid.Parse(doc.Id)));
+                }
             }
         }
         

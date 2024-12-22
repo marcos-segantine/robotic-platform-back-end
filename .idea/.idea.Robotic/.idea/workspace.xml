@@ -11,7 +11,7 @@
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +25,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35177de9032544018e31c9c64fbef1cbb2d000/de/b0fed78e/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35177de9032544018e31c9c64fbef1cbb2d000/ee/4b6158be/Monitor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ac543cc0bac74b1c8719d048e8bfec2f6a00/4c/0ce084af/ConfigurationExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5a29ddfe96ea435110af1c62714671493c2bdfbba95a3a64dd748c374a31fd4/DocumentSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cc312386d28715295a94b59acee8753c5ff39c9e2ab9dc985f72dd647ab2a/GaxPreconditions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file:///usr/lib/dotnet/sdk/8.0.108/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_6_all.globalconfig" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61cc76f205b4535a5b4f40700c07900b2d200/6b/dde478b1/Monitor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///usr/lib/dotnet/sdk/9.0.101/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_8_default.globalconfig" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -48,7 +44,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.Robotic.Web: http.executor": "Debug",
+    ".NET Launch Settings Profile.Robotic.Web: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "XThreadsFramesViewSplitterKey": "0.4331984",
@@ -137,62 +133,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/ActivityRepository.cs</url>
-          <line>36</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/ActivityRepository.cs" containingFunctionPresentation="Method 'GetById'">
-            <startOffsets>
-              <option value="1047" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1509" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/ActivityRepository.cs</url>
-          <line>34</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/ActivityRepository.cs" containingFunctionPresentation="Method 'GetById'">
-            <startOffsets>
-              <option value="985" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1037" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>251</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetActivitiesNotViewed'">
-            <startOffsets>
-              <option value="7433" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7486" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>249</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetActivitiesNotViewed'">
-            <startOffsets>
-              <option value="7373" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7402" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#System.Collections.Generic.KeyValuePair`2" memberName="Value" />

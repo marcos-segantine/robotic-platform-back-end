@@ -6,6 +6,7 @@ public class ActivityDTO
     public string Title { get; private set; }
     public string Question { get; private set; }
     public string[] Alternatives { get; private set; }
+    public string RightResponse { get; private set; }
     public short Points { get; private set; }
     public string[] Resources { get; private set; }
     public string Summarize { get; private set; }
@@ -19,7 +20,8 @@ public class ActivityDTO
         short points,
         string[] resources,
         string summarize,
-        string explanation)
+        string explanation,
+        string rightResponse)
     {
         var year = DateTime.Today.Year;
         var month = DateTime.Today.Month;
@@ -36,5 +38,6 @@ public class ActivityDTO
         Resources = resources;
         Summarize = summarize;
         Explanation = explanation;
+        RightResponse = rightResponse;
     }
 }

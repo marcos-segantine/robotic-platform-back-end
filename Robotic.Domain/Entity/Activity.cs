@@ -8,6 +8,7 @@ public class Activity : BaseEntity
     public string Title { get; private set; }
     public string Question { get; private set; }
     public string[] Alternatives { get; private set; }
+    public string RightResponse { get; private set; }
     public short Points { get; private set; }
     public string[] Resources { get; private set; }
     public string Summarize { get; private set; }
@@ -21,7 +22,8 @@ public class Activity : BaseEntity
         short points,
         string[] resources,
         string summarize,
-        string explanation)
+        string explanation,
+        string rightResponse)
     {
         Id = id;
         Title = title;
@@ -31,5 +33,6 @@ public class Activity : BaseEntity
         Resources = resources;
         Summarize = summarize;
         Explanation = explanation;
+        RightResponse = rightResponse;
     }
 }

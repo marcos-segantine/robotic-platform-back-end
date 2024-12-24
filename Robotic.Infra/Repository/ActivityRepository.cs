@@ -42,7 +42,8 @@ public class ActivityRepository : IActivityRepository
             snapshot.GetValue<short>("points"),
             snapshot.GetValue<string[]>("resources"),
             snapshot.GetValue<string>("summarize"),
-            snapshot.GetValue<string>("explanation")
+            snapshot.GetValue<string>("explanation"),
+            snapshot.GetValue<string>("rightResponse")
             );
         
         return data;
@@ -97,7 +98,8 @@ public class ActivityRepository : IActivityRepository
                document.GetValue<short>("points"),
                document.GetValue<string[]>("resources"),
                document.GetValue<string>("summarize"),
-               document.GetValue<string>("explanation")
+               document.GetValue<string>("explanation"),
+               document.GetValue<string>("rightResponse")
             );
             
             result.Add(newActivity);

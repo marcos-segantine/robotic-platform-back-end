@@ -11,7 +11,6 @@
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Web/Routes/StudentRoutes.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.Robotic.Web: http.executor": "Debug",
+    ".NET Launch Settings Profile.Robotic.Web: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "XThreadsFramesViewSplitterKey": "0.4331984",
@@ -122,6 +121,7 @@
       <workItem from="1726430942300" duration="1627000" />
       <workItem from="1734642595948" duration="7089000" />
       <workItem from="1734794999000" duration="9194000" />
+      <workItem from="1734965083937" duration="6618000" />
     </task>
     <servers />
   </component>
@@ -133,36 +133,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>398</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetLeaningProcess'">
-            <startOffsets>
-              <option value="12380" />
-            </startOffsets>
-            <endOffsets>
-              <option value="12435" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="128" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
-          <line>400</line>
-          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetLeaningProcess'">
-            <startOffsets>
-              <option value="12457" />
-            </startOffsets>
-            <endOffsets>
-              <option value="12483" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#System.Collections.Generic.KeyValuePair`2" memberName="Value" />

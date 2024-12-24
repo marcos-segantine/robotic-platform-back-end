@@ -280,13 +280,48 @@ public class StudentRepository : IStudentRepository
     {
         public async Task<List<Dictionary<string, object>>> GetStatisticsFromTrail(List<string> path)
         {
-            var activityRef = new AppDbContext()
+            if (path.Count == 3)
+            {
+                var activityStatisticRef = new AppDbContext()
+                    .GetCollection("statistics")
+                    .Document(path[0])
+                    .Collection(path[1])
+                    .Document(path[2]);
+                
+                var activityStatisticData = await activityStatisticRef.GetSnapshotAsync();
+
+                var result = new List<Dictionary<string, object>>();
+                
+                    
+                if (!activityStatisticData.Exists)
+                {
+                    result.Add(new Dictionary<string, object>()
+                    {
+                        { "isCompleted", false }, 
+                        { "viewed", false },
+                        { "points", 0 }
+                    });
+                    return result;
+                }
+                
+                result.Add(new Dictionary<string, object>()
+                {
+                    { "isCompleted", activityStatisticData.GetValue<bool>("isCompleted") }, 
+                    { "viewed", activityStatisticData.GetValue<bool>("viewed") },
+                    { "points", activityStatisticData.GetValue<short>("points") }
+                });
+                
+                return result;
+            }
+            
+            var trailStatisticRef = new AppDbContext()
                 .GetCollection("statistics")
                 .Document(path[0])
                 .Collection(path[1]);
 
-            var data = await activityRef.GetSnapshotAsync();
-
+            var data = await trailStatisticRef.GetSnapshotAsync();
+            var activitiesInStatistics = data.Documents.Select(item => item.Id);
+            
             var trailRef = new AppDbContext()
                 .GetCollection("trails")
                 .Document(path[1]);
@@ -311,15 +346,16 @@ public class StudentRepository : IStudentRepository
                 return dataFormatted;
             }
             
-            foreach (var item in data)
+            foreach (var item in activitiesFromTrail)
             {
-                if (activitiesFromTrail.Contains(item.Id))
+                if (activitiesInStatistics.Contains(item))
                 {
+                    var activityStatistic = await trailStatisticRef.Document(item).GetSnapshotAsync();
                     dataFormatted.Add(new Dictionary<string, object>()
                     {
-                        { "isCompleted", item.GetValue<bool>("isCompleted") }, 
-                        { "viewed", item.GetValue<bool>("viewed") },
-                        { "points", item.GetValue<short>("points") }
+                        { "isCompleted", activityStatistic.GetValue<bool>("isCompleted") }, 
+                        { "viewed", activityStatistic.GetValue<bool>("viewed") },
+                        { "points", activityStatistic.GetValue<short>("points") }
                     });
                 }
                 else
@@ -366,7 +402,6 @@ public class StudentRepository : IStudentRepository
 
             await activityRef.UpdateAsync(field, value);
         }
-
         public async Task<Dictionary<string, object>> GetLeaningProcess(Guid studentID)
         {
             var trailRef = new AppDbContext().GetCollection("trails");

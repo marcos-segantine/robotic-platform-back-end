@@ -10,10 +10,7 @@
   <component name="ChangeListManager">
     <list default="true" id="be65097d-5859-4091-b8d0-cc2dffbd256f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robotic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Application/DTOs/ActivityDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Application/DTOs/ActivityDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Domain/Entity/Activity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Domain/Entity/Activity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/ActivityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/ActivityRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robotic.Infra/Repository/TrailRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.Infra/Repository/TrailRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robotic.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Robotic.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +25,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61cc76f205b4535a5b4f40700c07900b2d200/6b/dde478b1/Monitor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61cc76f205b4535a5b4f40700c07900b2d200/7c/d0f4d7f7/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/lib/dotnet/sdk/9.0.101/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_8_default.globalconfig" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -44,22 +42,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Robotic.Web: http.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4331984&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Robotic.Web: http.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.4331984",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Robotic.Web: http">
     <configuration name="Robotic.Web: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Robotic.Web/Robotic.Web.csproj" />
@@ -137,6 +135,62 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
+          <line>470</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetLeaningProcess'">
+            <startOffsets>
+              <option value="15293" />
+            </startOffsets>
+            <endOffsets>
+              <option value="15338" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
+          <line>434</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetLeaningProcess'">
+            <startOffsets>
+              <option value="13769" />
+            </startOffsets>
+            <endOffsets>
+              <option value="13798" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
+          <line>439</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetLeaningProcess'">
+            <startOffsets>
+              <option value="13948" />
+            </startOffsets>
+            <endOffsets>
+              <option value="14003" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs</url>
+          <line>451</line>
+          <properties documentPath="$PROJECT_DIR$/Robotic.Infra/Repository/StudentRepository.cs" containingFunctionPresentation="Method 'GetLeaningProcess'">
+            <startOffsets>
+              <option value="14469" />
+            </startOffsets>
+            <endOffsets>
+              <option value="14495" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#System.Collections.Generic.KeyValuePair`2" memberName="Value" />

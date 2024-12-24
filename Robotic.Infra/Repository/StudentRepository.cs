@@ -468,7 +468,7 @@ public class StudentRepository : IStudentRepository
                     result["activitiesCount"] = (int)result["activitiesCount"] + 1;
                 }
 
-                if (activitiesCompleted == activities.Length)
+                if (activitiesCompleted == activities.Length && activities.Length != 0)
                 {
                     result["trailsCompleted"] = (int)result["trailsCompleted"] + 1;
                 }

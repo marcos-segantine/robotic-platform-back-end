@@ -7,7 +7,7 @@ public class ActivityDTO
     public string Question { get; private set; }
     public string[] Alternatives { get; private set; }
     public string RightResponse { get; private set; }
-    public short Points { get; private set; }
+    public short Weight { get; private set; }
     public string[] Resources { get; private set; }
     public string Summarize { get; private set; }
     public string Explanation { get; private set; }
@@ -17,7 +17,7 @@ public class ActivityDTO
         string title,
         string question,
         string[] alternatives,
-        short points,
+        short weight,
         string[] resources,
         string summarize,
         string explanation,
@@ -34,7 +34,7 @@ public class ActivityDTO
         Title = title;
         Question = question;
         Alternatives = alternatives;
-        Points = points;
+        Weight = weight;
         Resources = resources;
         Summarize = summarize;
         Explanation = explanation;

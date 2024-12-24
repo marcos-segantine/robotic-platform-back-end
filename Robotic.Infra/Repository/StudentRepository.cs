@@ -239,6 +239,9 @@ public class StudentRepository : IStudentRepository
 
             await statistics.UpdateActivityState(path, "points", points);
             await statistics.UpdateActivityState(path, "isCompleted", true);
+            
+            var studentRef = _collectionReference.Document(path[0]);
+            studentRef.UpdateAsync("points", FieldValue.Increment(points));
         }
         catch (Exception e)
         {

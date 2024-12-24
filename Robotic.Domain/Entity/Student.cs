@@ -11,11 +11,10 @@ public class Student : BaseEntity
     public Schooling Schooling { get; private set; }
     public string PhotoPath { get; private set; }
     public int Points { get; private set; }
-    public Certifications Certificates { get; private set; }
     public ScheduleClass ScheduleClass { get; private set; }
     public List<Statistics> Statistics { get; private set; }
 
-    public Student(Guid id, string name, School school, Schooling schooling, string photoPath, int points, Certifications certificates, ScheduleClass scheduleClass, List<Statistics> statistics)
+    public Student(Guid id, string name, School school, Schooling schooling, string photoPath, int points, ScheduleClass scheduleClass, List<Statistics> statistics)
     {
         Id = id;
         Name = name;
@@ -23,7 +22,6 @@ public class Student : BaseEntity
         Schooling = schooling;
         PhotoPath = photoPath;
         Points = points;
-        Certificates = certificates;
         ScheduleClass = scheduleClass;
         Statistics = statistics;
     }

@@ -8,7 +8,6 @@ public class StudentDTO
     public Schooling Schooling { get; private set; }
     public string PhotoPath { get; private set; }
     public int Points { get; private set; }
-    public Certifications Certificates { get; private set; }
     public ScheduleClass ScheduleClass { get; private set; }
     public List<Statistics> Statistics { get; private set; }
 
@@ -18,7 +17,6 @@ public class StudentDTO
         Schooling schooling,
         string photoPath,
         int points,
-        Certifications certificates,
         ScheduleClass scheduleClass,
         List<Statistics> statistics)
     {
@@ -27,7 +25,6 @@ public class StudentDTO
         Schooling = schooling;
         PhotoPath = photoPath;
         Points = points;
-        Certificates = certificates;
         ScheduleClass = scheduleClass;
         Statistics = statistics;
     }

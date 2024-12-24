@@ -1,4 +1,3 @@
-using System.Reflection.Metadata;
 using Google.Cloud.Firestore;
 using Robotic.Application.DTOs;
 using Robotic.Application.Interfaces;
@@ -53,7 +52,6 @@ public class StudentRepository : IStudentRepository
                 (Schooling)data.GetValue<int>("schooling"),
                 data.GetValue<string>("photoPath"),
                 data.GetValue<int>("points"),
-                Converter.CertificationsConverter(data.GetValue<Dictionary<string, object>>("certificates")),
                 data.GetValue<ScheduleClass>("scheduleClass"),
                 data.GetValue<List<Statistics>>("statistics")
                 );
@@ -90,7 +88,6 @@ public class StudentRepository : IStudentRepository
                 document.GetValue<Schooling>("schooling"),
                 document.GetValue<string>("photoPath"),
                 document.GetValue<int>("points"),
-                Converter.CertificationsConverter(document.GetValue<Dictionary<string, object>>("certificates")),
                 document.GetValue<ScheduleClass>("scheduleClass"),
                 document.GetValue<List<Statistics>>("statistics")
                 );
@@ -159,7 +156,6 @@ public class StudentRepository : IStudentRepository
                     (Schooling)document.GetValue<int>("schooling"),
                     document.GetValue<string>("photoPath"),
                     document.GetValue<int>("points"),
-                    document.GetValue<Certifications>("certifications"),
                     document.GetValue<ScheduleClass>("scheduleClass"),
                     document.GetValue<List<Statistics>>("statistics")
                 );

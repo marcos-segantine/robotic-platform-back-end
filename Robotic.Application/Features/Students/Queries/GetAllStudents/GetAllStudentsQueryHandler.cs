@@ -19,7 +19,6 @@ public class GetAllStudentsQueryHandler
                 student.Schooling,
                 student.PhotoPath,
                 student.Points,
-                student.Certificates,
                 student.ScheduleClass,
                 student.Statistics
                 ));

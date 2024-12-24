@@ -21,7 +21,6 @@ public class CreateStudentCommandHandler
             command.Schooling,
             command.PhotoPath,
             command.Points,
-            command.Certificates,
             command.ScheduleClass,
             command.Statistics);
 

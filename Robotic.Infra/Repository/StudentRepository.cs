@@ -230,6 +230,22 @@ public class StudentRepository : IStudentRepository
             throw new ArgumentException();
         }
     }
+    
+    public async Task MarkActivityAsDone(List<string> path, short points)
+    {
+        try
+        {
+            TrailsStatistics statistics = new TrailsStatistics();
+
+            await statistics.UpdateActivityState(path, "points", points);
+            await statistics.UpdateActivityState(path, "isCompleted", true);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
 
     public async Task CreateStatistic(List<string> path)
     {

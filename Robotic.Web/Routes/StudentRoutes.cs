@@ -75,6 +75,12 @@ public static class StudentsRoutes
             Results.NoContent();
         });
         
+        app.MapPut("mark-activity-as-done", async (List<string> path, short points) =>
+        {
+            await studentMethods.MarkActivityAsDone(path, points);
+            Results.NoContent();
+        });
+        
         app.MapPut("update-student", async (Student student) =>
         {
             await studentMethods.Update(student);

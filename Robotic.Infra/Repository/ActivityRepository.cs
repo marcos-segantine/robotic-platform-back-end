@@ -107,4 +107,33 @@ public class ActivityRepository : IActivityRepository
 
         return result;
     }
+
+    public async Task<List<Dictionary<string, object>>> GetRanking(List<string>? path)
+    {
+        try
+        {
+            var students = await new AppDbContext().GetCollection("student").GetSnapshotAsync();
+
+            var result = new List<Dictionary<string, object>>();
+            
+            foreach (var student in students)
+            {
+                result.Add(new Dictionary<string, object>()
+                {
+                    { "name", student.GetValue<string>("name") },
+                    { "points", student.GetValue<int>("points") },
+                    { "photoPath", student.GetValue<string>("photoPath") },
+                    { "school", student.GetValue<School>("school") }
+                });
+            }
+            
+            var resultSorted = result.OrderByDescending(d => (int)d["points"]).ToList();
+            return resultSorted;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
 }
